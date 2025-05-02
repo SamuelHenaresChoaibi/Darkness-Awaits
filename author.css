@@ -81,6 +81,8 @@
     padding: 5rem 2rem;
     border-radius: 10px;
     margin: 3rem auto;
+    margin-left: 5rem;
+    margin-right: 5rem;
     max-width: 1200px;
 }
 
@@ -112,6 +114,8 @@
     background: rgba(0, 0, 0, 0.8);
     padding: 4rem;
     margin: 4rem auto;
+    margin-left: 5rem;
+    margin-right: 5rem;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
     max-width: 1200px;

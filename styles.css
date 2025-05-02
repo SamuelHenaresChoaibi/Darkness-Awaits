@@ -89,7 +89,7 @@ nav ol, ul {
 }
 
 .menu_hamburguesa:checked + .ul_links {
-    height: calc(105vh - var(--altura_header) + 75px);
+    height: calc(115vh - var(--altura_header) + 75px);
     background-color: var(--color-menu);
     z-index: 40;
 }
@@ -238,7 +238,7 @@ video {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    padding: 5rem 2rem;
+    padding: 5rem 15rem;
     background-color: var(--color-gris-oscuro);
 }
 
