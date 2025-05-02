@@ -89,7 +89,7 @@ nav ol, ul {
 }
 
 .menu_hamburguesa:checked + .ul_links {
-    height: calc(100vh - var(--altura_header) + 75px);
+    height: calc(120vh - var(--altura_header) + 75px);
     background-color: var(--color-menu);
     z-index: 40;
 }
@@ -344,7 +344,7 @@ video {
 }
 
 .gallery-item {
-    height: 250px;
+    max-height: fit-content;
     background-size: cover;
     background-position: center;
     border-radius: 8px;
@@ -356,29 +356,6 @@ video {
 .gallery-item:hover {
     transform: scale(1.03);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.gallery-item:nth-child(1) {
-    background-image: url('../sources/images/game/Celda.png');
-}
-
-.gallery-item:nth-child(2) {
-    background-image: url('../sources/images/game/Celda2.png');
-}
-
-.gallery-item:nth-child(3) {
-    background-image: url('../sources/images/game/Estatua.png');
-}
-
-.gallery-item:nth-child(4) {
-    background-image: url('../sources/images/game/PlacaPresion.png');
-}
-
-.gallery-item:nth-child(5) {
-    background-image: url('../sources/images/game/Salida.png');
-}
-.gallery-item:nth-child(6) {
-    background-image: url('../sources/images/game/Trampa.png');
 }
 
 /* Testimonials Section */
@@ -587,6 +564,12 @@ video {
 /* Utility Classes */
 .tx-20 {
     font-size: 200%;
+}
+
+.techinc-section{
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), 
+    url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWI1ZHVsdTFkamdoMzAxbHI3ZzAzbGc3ZHR5ejhncmNxMGxqd283eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o85xyBPM2nmoMvraw/giphy.gif') center/cover no-repeat fixed;
+
 }
 
 /* Responsive Adjustments */

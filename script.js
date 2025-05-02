@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         playPromise.catch(error => {
             // Auto-play was prevented, show muted button
             audio.muted = true;
-            muteButton.textContent = " 🔇 ";
+            muteButton.textContent = " 🔊 ";
         });
     }
 
