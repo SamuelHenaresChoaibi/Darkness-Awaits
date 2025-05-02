@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Darkness Awaits</title>
-    <link rel="stylesheet" href="blog.css">
+    <title>Contacto | Darkness Awaits</title>
+    <link rel="stylesheet" href="contacto.css">
     <link rel="stylesheet" href="styles.css"> <!-- Estilos generales -->
     <script src="script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="blog-page">
+
+<body class="contact-page">
     <div id="linterna" class="linterna z-40"></div>
     <!-- Header -->
     <header class="bg-black py-6 px-8 flex justify-between items-center fade-in shadow-xl">
@@ -29,13 +31,13 @@
                 <a href="index.html" class="link">Inicio</a>
             </li>
             <li class="li_links">
-                <a href="contacto.html" class="link">Contacto</a>
+                <a href="contacto.html" class="link-selected">Contacto</a>
             </li>
             <li class="li_links">
                 <a href="comentarios.html" class="link">Comentario</a>
             </li>
             <li class="li_links">
-                <a href="blog.html" class="link-selected">Blog</a>
+                <a href="blog.html" class="link">Blog</a>
             </li>
             <li class="li_links">
                 <a href="registro-partidas.html" class="link">Registro de Partidas</a>
@@ -47,7 +49,7 @@
                 <a href="como-descargar.html" class="link">¿Cómo lo descargo?</a>
             </li>
         </ul>
-        
+
         <!-- Título y Subtítulo -->
         <div class="text-center px-4">
             <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold text-red-600 flicker">
@@ -57,7 +59,7 @@
                 La oscuridad te espera... ¿Estás listo?
             </p>
         </div>
-        
+
         <!-- Botón de Mutear -->
         <button id="mute-button" class="px-6 py-2 bg-black text-white rounded-lg hover:bg-red-800 transition tx-20">
             🔊
@@ -66,57 +68,92 @@
     <audio id="background-music" src="/sources/sounds/sound-ambience-sonido-ambiente-3-14040.mp3" autoplay loop></audio>
 
     <!-- Contenido principal -->
-    <main class="flex-grow bg-da">
-        <!-- Sección del Blog -->
-        <section class="blog-section fade-in">
-            <h2 class="text-center flicker"><b>ÚLTIMAS ACTUALIZACIONES Y ARTÍCULOS</b></h2>
-            
-            <!-- Grid de artículos (se llenará con API) -->
-            <div class="posts-grid" id="posts-container">
-                <!-- Ejemplo de artículo (se generará dinámicamente) -->
-                <article class="post-card">
-                    <h3>Los Secretos de la Oscuridad</h3>
-                    <p>Descubre los elementos más aterradores que se ocultan en el juego.</p>
-                    <a href="#" class="read-more">Leer más</a>
-                </article>
-                
-                <article class="post-card">
-                    <h3>Creando el Ambiente de Terror</h3>
-                    <p>Cómo se diseñaron los escenarios para maximizar el miedo.</p>
-                    <a href="#" class="read-more">Leer más</a>
-                </article>
-                
-                <article class="post-card">
-                    <h3>El Origen de la Historia</h3>
-                    <p>Los mitos y leyendas que inspiraron Darkness Awaits.</p>
-                    <a href="#" class="read-more">Leer más</a>
-                </article>
-                
-                <article class="post-card">
-                    <h3>Pesadillas recurrentes</h3>
-                    <p>Cómo el juego se inspira en los miedos más comunes.</p>
-                    <a href="#" class="read-more">Leer más</a>
-                </article>
-                
-                <article class="post-card">
-                    <h3>Criaturas ocultas</h3>
-                    <p>Los monstruos más aterradores que acechan en la oscuridad.</p>
-                    <a href="#" class="read-more">Leer más</a>
-                </article>
-                
-                <article class="post-card">
-                    <h3>Psicología del terror</h3>
-                    <p>Por qué el miedo nos fascina y nos aterra al mismo tiempo.</p>
-                    <a href="#" class="read-more">Leer más</a>
-                </article>
+    <main class="flex-grow">
+        <!-- Sección de contacto -->
+        <section class="contact-section fade-in">
+            <h2 class="text-center flicker"><b>CONTÁCTANOS</b></h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+                <!-- Formulario con estilo de pergamino -->
+                <div class="ancient-parchment-form">
+                    <form class="eldritch-contact-form">
+                        <!-- Cabecera del pergamino -->
+                        <div class="scroll-header">
+                            <div class="wax-seal">
+                                <div class="seal-design"></div>
+                            </div>
+                            <h3 class="form-title">Contacto Oscuro</h3>
+                        </div>
+
+                        <!-- Campos del formulario -->
+                        <div class="form-field">
+                            <label class="eldritch-label">Tu Nombre Completo</label>
+                            <div class="input-container">
+                                <input type="text" name="nom" class="eldritch-input" required>
+                                <div class="ink-stain"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label class="eldritch-label">Correo de los Muertos Vivientes</label>
+                            <div class="input-container">
+                                <input type="email" name="correu" class="eldritch-input" required>
+                                <div class="ink-stain reverse"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label class="eldritch-label">Tu Mensaje Maldito</label>
+                            <div class="input-container">
+                                <textarea name="comentari" class="eldritch-textarea" required></textarea>
+                                <div class="ink-blot"></div>
+                            </div>
+                        </div>
+
+                        <!-- Botón de envío -->
+                        <button type="submit" class="cursed-submit-btn">
+                            <span class="btn-text">Invocar Respuesta</span>
+                            <span class="pentagram"></span>
+                        </button>
+
+                        <!-- Nota al pie -->
+                        <div class="form-footer">
+                            <p class="warning-text">*Al enviar este formulario, aceptas que las sombras te observen</p>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Imagen del juego -->
+                <div class="flex-column items-center justify-center">
+                    <img src="/sources/images/game/Estatua.png" alt="Personaje del juego" class="contact-image mb-4"> <!-- mb-4 = margin-bottom: 1rem -->
+                    <img src="/sources/images/game/Celda2.png" alt="Celda del juego" class="contact-image">
+                </div>
+
             </div>
-            
-            <!-- Paginación (se generará dinámicamente) -->
-            <div class="pagination" id="pagination-container">
-                <a href="#" class="active">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">→</a>
+        </section>
+
+        <!-- Sección de información de contacto -->
+        <section class="contact-section fade-in contact-info-section">
+            <h2 class="text-center flicker"><b>INFORMACIÓN DE CONTACTO</b></h2>
+
+            <div class="contact-info-grid">
+                <div class="contact-card">
+                    <h3><b>CREADOR DEL JUEGO</b></h3>
+                    <p><b>Nombre:</b> Jorge Pastor Castilla</p>
+                    <p><b>Email:</b> jorgepastor@paucasesnovescifp.cat</p>
+                    <p><b>Redes sociales:</b> @</p>
+                </div>
+
+                <div class="contact-card margin-top-25">
+                    <h3><b>CREADORES DE LA PÁGINA WEB</b></h3>
+                    <p><b>Equipo:</b> Darkness Web Team</p>
+                    <p><b>Miembro 1:</b> Samuel Henares Choaibi</p>
+                    <p><b>Miembro 2:</b> Adrián Plaza Ramírez</p>
+                    <p><b>Miembro 3:</b> Rafel Monzo Oliver</p>
+                    <p><b>Email:</b> webteam@darkness-awaits.com</p>
+                    <p><b>Soporte técnico:</b>Soporte técnico: samuelhenares@paucasesnovescifp.cat |
+                        adrianplaza@paucasesnovescifp.cat | rafelmonzo@paucasesnovescifp.cat</p>
+                </div>
             </div>
         </section>
     </main>
@@ -156,9 +193,11 @@
             </div>
 
             <div class="mt-6">
-                <p class="text-xs">Desarrollado por <a href="#" class="text-red-500 hover:underline">Darkness Team</a></p>
+                <p class="text-xs">Desarrollado por <a href="#" class="text-red-500 hover:underline">Darkness Team</a>
+                </p>
             </div>
         </div>
     </footer>
 </body>
+
 </html>
