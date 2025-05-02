@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Darkness-Awaits">
+    <meta name="description" content="Darkness Awaits - Juego de terror psicológico">
+    <meta property="og:url" content="Darkness-Awaits">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="juego de terror, horror, darkness awaits, videojuego indie">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="https://i.pinimg.com/736x/d0/ee/cd/d0eecd5b96b94707a317053ab1addd83.jpg">
+    <!-- Define el logo -->
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Darkness Awaits</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+</head>
+
+<body class="bg-dark text-white font-sans">
+    <div id="linterna" class="linterna z-40"></div>
+
+    <header class="bg-black py-6 px-8 flex justify-between items-center fade-in shadow-xl">
+        <!-- Menú Hamburguesa -->
+        <label for="menu_hamburguesa">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="list_icon"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+        </label>
+
+        <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa">
+
+        <ul class="ul_links">
+            <li class="li_links">
+                <a href="index.html" class="link-selected">Inicio</a>
+            </li>
+            <li class="li_links">
+                <a href="contacto.html" class="link">Contacto</a>
+            </li>
+            <li class="li_links">
+                <a href="comentarios.html" class="link">Comentario</a>
+            </li>
+            <li class="li_links">
+                <a href="#" class="link">Trailer oficial</a>
+            </li>
+            
+            <li class="li_links">
+                <a href="blog.html" class="link">Blog</a>
+            </li>
+            <li class="li_links">
+                <a href="registro-partidas.html" class="link">Registro de Partidas</a>
+            </li>
+            <li class="li_links">
+                <a href="author.html" class="link">Autor</a>
+            </li>
+            <li class="li_links">
+                <a href="como-descargar.html" class="link">¿Cómo lo descargo?</a>
+            </li>
+        </ul>
+
+        <!-- Título y Subtítulo -->
+        <div class="text-center px-4">
+
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold text-red-600 flicker">
+                DARKNESS AWAITS
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-400 italic mt-2">
+                La oscuridad te espera... ¿Estás listo?
+            </p>
+        </div>
+
+        <!-- Botón de Mutear -->
+        <button id="mute-button" class="px-6 py-2 bg-black text-white rounded-lg hover:bg-red-800 transition tx-20">
+            🔊
+        </button>
+    </header>
+    <audio id="background-music" src="/sources/sounds/sound-ambience-sonido-ambiente-3-14040.mp3" autoplay loop></audio>
+
+    <!-- Hero Section --> 
+    <section class="hero-section fade-in relative overflow-hidden">
+        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="sources/images/game/Cinematica.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        
+        <div class="hero-overlay absolute inset-0 bg-black bg-opacity-60 z-1"></div>
+        
+        <div class="hero-content relative z-2">
+            <h2 class="hero-title">DÉJATE SUCUMBIR POR LA OSCURIDAD...</h2>
+            <p class="hero-subtitle">Adéntrate en un mundo de pesadillas donde cada sombra oculta un secreto. ¿Eres lo suficientemente valiente para descubrir la verdad?</p>
+            <div class="hero-buttons">
+                <a href="#download" class="btn-primary">DESCARGAR AHORA</a>
+                <a href="sources/images/game/Cinematica.mp4" class="btn-secondary" >VER TRÁILER</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Features -->
+    <section class="features-section">
+        <div class="feature-card">
+            <div class="feature-icon">👁️</div>
+            <h3>Terror Psicológico</h3>
+            <p>Una narrativa que jugará con tus miedos más profundos.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🌑</div>
+            <h3>Ambientes Inmersivos</h3>
+            <p>Explora lugares oscuros llenos de secretos y peligros.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🧩</div>
+            <h3>Acertijos Desafiantes</h3>
+            <p>Resuelve puzzles para avanzar en la historia.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎧</div>
+            <h3>Audio 3D</h3>
+            <p>Sonido binaural que te hará girar la cabeza en la vida real.</p>
+        </div>
+    </section>
+
+    <!-- About Game -->
+    <section class="about-section">
+        <div class="about-content">
+            <h2>SOBRE EL JUEGO</h2>
+            <p>Darkness Awaits es una experiencia de terror psicológico en primera persona donde explorarás un mundo de
+                pesadillas. Cada sombra oculta un secreto, cada sonido puede ser tu perdición. ¿Podrás mantener la
+                cordura lo suficiente para descubrir la verdad?</p>
+
+            <div class="game-stats">
+                <div class="stat">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Horas de juego</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Acertijos únicos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Secretos ocultos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Gallery -->
+    <section class="gallery-section">
+        <h2>GALERÍA</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <h2>RESEÑAS DEL VIDEOJUEGO</h2>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <p>"El juego más aterrador que he jugado en años. No podía dormir después de la primera sesión."</p>
+                <div class="testimonial-author">- Alex, HorrorFan92</div>
+            </div>
+            <div class="testimonial-card">
+                <p>"La atmósfera es increíble. Realmente te hace sentir que estás en una pesadilla."</p>
+                <div class="testimonial-author">- María, GameReviewer</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section">
+        <!-- Fondo interactivo con partículas -->
+        <div id="particles-js" class="particles-background"></div>
+        
+        <!-- Contenido de la sección -->
+        <div class="download-content">
+            <h2>¿LISTO PARA EL HORROR?</h2>
+            <p class="glitch-text">Descarga ahora y comienza tu viaje a la oscuridad</p>
+            
+            <div class="download-options">
+                <a href="como-descargar.html" class="download-btn windows pulse-animation">
+                    <span class="btn-icon">💻</span>
+                    <span>DESCARGAR PARA WINDOWS</span>
+                </a>
+                
+                <a href="https://corbekun.itch.io/darkness-awaits" class="download-btn mac pulse-animation">
+                    <span class="btn-icon">👾</span>
+                    <span>PÁGINA PARA MAC, LINUX Y WINDOWS</span>
+                </a>
+            </div>
+            
+            <div class="blood-drips"></div>
+        </div>
+    </section>
+
+
+    <footer class="bg-black py-12 text-center fade-in shadow-xl text-gray-400">
+        <div class="container mx-auto px-6">
+            <p class="text-lg">&copy; 2025 Darkness Awaits. Todos los derechos reservados.</p>
+
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="hover:text-red-500 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                    </svg>
+                </a>
+                <a href="#" class="hover:text-red-500 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.46.35a9 9 0 0 1-2.84 1.08 4.47 4.47 0 0 0-7.59 4.07A12.7 12.7 0 0 1 3 2.35 4.47 4.47 0 0 0 4.57 9.86 4.46 4.46 0 0 1 2 9.2v.06A4.47 4.47 0 0 0 4.44 14a4.48 4.48 0 0 1-2 .08 4.48 4.48 0 0 0 4.18 3.12A9 9 0 0 1 0 19.54a12.7 12.7 0 0 0 6.92 2c8.3 0 12.86-6.88 12.86-12.86v-.59A9 9 0 0 0 23 3z" />
+                    </svg>
+                </a>
+                <a href="#" class="hover:text-red-500 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M10 15l5.19-3L10 9z" />
+                        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="mt-6">
+                <ul class="flex justify-center space-x-6 text-sm">
+                    <li><a href="#" class="hover:text-red-500 transition">Política de Privacidad</a></li>
+                    <li><a href="#" class="hover:text-red-500 transition">Términos y Condiciones</a></li>
+                    <li><a href="#" class="hover:text-red-500 transition">Soporte</a></li>
+                    <li><a href="#" class="hover:text-red-500 transition">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="mt-6">
+                <p class="text-xs">Desarrollado por <a href="#" class="text-red-500 hover:underline">Darkness Team</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <audio id="background-music" src="sounds/sound-ambience-sonido-ambiente-3-14040.mp3" autoplay loop></audio>
+    <script src="js/scripts.js"></script>
+    <script src="/javascript/script.js"></script>
+
+</body>
+
+</html>
