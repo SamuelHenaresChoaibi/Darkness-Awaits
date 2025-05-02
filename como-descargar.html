@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="author" content="Darkness-Team">
-    <meta name="description" content="Darkness Awaits - Autor">
+    <meta name="description" content="Darkness Awaits - Juego de Terror Psicológico">
     <meta property="og:url" content="Darkness-Awaits">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="juego de terror, horror, darkness awaits, videojuego indie">
-    <title>Autor | Darkness Awaits</title>
     <link rel="icon" href="https://i.pinimg.com/736x/d0/ee/cd/d0eecd5b96b94707a317053ab1addd83.jpg">
-    <link rel="stylesheet" href="author.css">
+    <title>¿Cómo descargar? | Darkness Awaits</title>
+    <link rel="stylesheet" href="como-descargar.css">
     <link rel="stylesheet" href="styles.css"> <!-- Estilos generales -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="author-page">
+<body class="download-page">
+    <!-- Header -->
     <header class="bg-black py-6 px-8 flex justify-between items-center fade-in shadow-xl">
         <!-- Menú Hamburguesa -->
         <label for="menu_hamburguesa">
@@ -42,97 +43,98 @@
                 <a href="blog.html" class="link">Blog</a>
             </li>
             <li class="li_links">
-                <a href="registro-partidas.html" class="link">Registro de Partidas</a>
+                <a href="registro-partidas.html" class="link-selected">Registro de Partidas</a>
             </li>
             <li class="li_links">
-                <a href="author.html" class="link-selected">Autor</a>
+                <a href="author.html" class="link">Autor</a>
             </li>
             <li class="li_links">
                 <a href="como-descargar.html" class="link">¿Cómo lo descargo?</a>
             </li>
         </ul>
-
+        
         <!-- Título y Subtítulo -->
         <div class="text-center px-4">
-
             <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold text-red-600 flicker">
-                DARKNESS AWAITS
+                Darkness Awaits
             </h1>
             <p class="text-lg sm:text-xl text-gray-400 italic mt-2">
                 La oscuridad te espera... ¿Estás listo?
             </p>
         </div>
-
+        
         <!-- Botón de Mutear -->
         <button id="mute-button" class="px-6 py-2 bg-black text-white rounded-lg hover:bg-red-800 transition tx-20">
             🔊
         </button>
     </header>
-    <audio id="background-music" src="/sources/sounds/sound-ambience-sonido-ambiente-3-14040.mp3" autoplay loop></audio>
+    <audio id="background-music" src="sounds/sound-ambience-sonido-ambiente-3-14040.mp3" autoplay loop></audio>
 
     <!-- Contenido principal -->
     <main class="flex-grow">
-        <!-- Sección del Autor -->
-        <section class="author-content-section fade-in">
-            <div class="text-center mb-12">
-                <h1 class="text-4xl md:text-5xl font-bold text-red-600 mb-4 flicker text-shadow-red">EL CREADOR DE LA OSCURIDAD</h1>
-                <p class="text-xl text-gray-400">La mente detrás de la pesadilla</p>
+        <!-- Sección de descarga para Windows -->
+        <section class="download-section fade-in">
+            <h2 class="text-center">¿Cómo descargar <i>Darkness Awaits</i>? (Windows)</h2>
+            
+            <div class="download-step">
+                <h3>1. Descargar ZIP</h3>
+                <p>
+                    Descargamos el archivo ZIP en el siguiente
+                    <a href="https://www.youtube.com/watch?v=Aq5WXmQQooo" class="download-link" target="_blank" rel="noopener noreferrer">enlace</a>.
+                </p>
+                <!-- <img src="" alt="Descargar-ZIP" class="download-image"> -->
             </div>
-
-            <div class="author-card md:flex">
-                <!-- Imagen del autor -->
-                <div class="md:w-1/3 p-6 flex items-center justify-center bg-black-900">
-                    <img src="https://media1.tenor.com/m/mTQgXH7XefEAAAAd/evil-king-von-king-von.gif" 
-                         alt="Autor del juego" 
-                         class="author-img">
-                </div>
-                
-                <!-- Información del autor -->
-                <div class="md:w-2/3 p-8">
-                    <h2 class="author-name">Jorge Pastor Castilla</h2>
-                    <h3 class="text-xl text-gray-300 mb-6 italic">¡Mi primer juego de terror!</h3>
-                    <p class="author-bio">
-                        Desarrollador independiente apasionado por el terror psicológico y las experiencias inmersivas. 
-                        Con más de 10 años de experiencia en la creación de mundos oscuros y narrativas inquietantes, 
-                        ha dedicado los últimos 3 años al desarrollo de Darkness Awaits, su proyecto más ambicioso hasta la fecha.
-                    </p>
-                    
-                    <!-- Estadísticas -->
-                    <div class="stats-grid mt-8">
-                        <div class="stat-item">
-                            <span class="block text-4xl font-bold text-red-500">Estudio</span>
-                            <br>
-                            <span class="text-gray-300"><i>Curso de Especialización en Desarrollo de Videojuegos y Realidad Virtual</i></span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="block text-4xl font-bold text-red-500">2+</span>
-                            <span class="text-gray-300">Años de experiencia</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="block text-4xl font-bold text-red-500">200+</span>
-                            <span class="text-gray-300">Horas de desarrollo</span>
-                        </div>
-                    </div>
-                </div>
+            
+            <div class="download-step">
+                <h3>2. Descomprimir ZIP</h3>
+                <p>
+                    Descomprimimos el archivo ZIP en la ruta donde se nos haga más cómodo abrir la carpeta para ejecutar el juego.
+                </p>
+                <!-- <img src="" alt="Descomprimir ZIP" class="download-image"> -->
+            </div>
+            
+            <div class="download-step">
+                <h3>3. Abrir carpeta</h3>
+                <p>Abrimos la carpeta descomprimida.</p>
+                <!-- <img src="" alt="Abrir carpeta" class="download-image"> -->
+            </div>
+            
+            <div class="download-step">
+                <h3>4. Ejecutar archivo .exe</h3>
+                <p>Ejecutamos el archivo .exe para poder ejecutar el juego.</p>
+                <!-- <img src="" alt="Ejecutar archivo .exe" class="download-image"> -->
+            </div>
+            
+            <div class="download-step">
+                <h3>5. ¡Disfrutar del juego!</h3>
+                <p>¡A disfrutar de Darkness Awaits, el tenebroso juego de rompecabezas!</p>
+                <!-- <img src="sources/images/menu-juego.png" alt="Foto menú" class="download-image"> -->
             </div>
         </section>
 
-        <!-- Sección de Técnicas -->
-        <section class="tech-section fade-in">
-            <div class="max-w-4xl mx-auto p-8">
-                <h2 class="text-3xl font-bold text-red-600 mb-6 text-center">TÉCNICAS DE DESARROLLO</h2>
-                <div class="prose prose-invert max-w-none">
-                    <p class="text-lg leading-relaxed mb-6">
-                        Diamondador el ingrediente de cosmético por el tiempo estadístico y los organismos interactivos 
-                        de estrés del 10 años de experiencia en el mundo que se produce durante y aumenta ingredientes, 
-                        los dedicados con otros. La obra es describida de Guerrero Auréis, un proyecto más simbolizado 
-                        hacia la fecha.
-                    </p>
-                </div>
+        <!-- Sección de alternativas -->
+        <section class="alternatives-section fade-in">
+            <h2 class="text-center">Alternativas para otros sistemas operativos (macOS y Linux)</h2>
+            
+            <div class="download-step">
+                <h3>itch.io</h3>
+                <p>
+                    El archivo anterior solo se encuentra disponible en Windows, ya que es un ejecutable del Sistema Operativo de Microsoft.  
+                    Sin embargo, para quienes utilizan macOS o Linux, existe una excelente alternativa:  
+                    <a href="https://itch.io/" class="download-link" target="_blank">itch.io</a>, una plataforma de distribución digital especializada en videojuegos independientes.  
+                    Desde esta página, los usuarios pueden descargar versiones compatibles con sus sistemas operativos, siempre que el desarrollador haya proporcionado dichas opciones.  
+                    Además, itch.io ofrece una aplicación de escritorio que facilita la gestión y actualización de juegos, proporcionando una experiencia más fluida y accesible para todos los jugadores.
+                    Para jugar Darkness Awaits, puedes buscar en la barra de navegación de la propia plataforma o puedes acceder al enlace del juego que te dejamos por aquí para que puedas acceder más rápido.
+                </p>
+                
+                <p class="padding-top-25">
+                    <a href="https://corbekun.itch.io/darkness-awaits" class="download-link" target="_blank">Enlace de Darkness Awaits en itch.io</a>
+                </p>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="bg-black py-12 text-center fade-in shadow-xl text-gray-400">
         <div class="container mx-auto px-6">
             <p class="text-lg">&copy; 2025 Darkness Awaits. Todos los derechos reservados.</p>
@@ -167,12 +169,11 @@
             </div>
 
             <div class="mt-6">
-                <p class="text-xs">Desarrollado por <a href="#" class="text-red-500 hover:underline">Darkness Team</a>
-                </p>
+                <p class="text-xs">Desarrollado por <a href="#" class="text-red-500 hover:underline">Darkness Team</a></p>
             </div>
         </div>
     </footer>
 
-    <script src="js/scripts.js"></script>
+    <script src="/javascript/script.js"></script>
 </body>
 </html>

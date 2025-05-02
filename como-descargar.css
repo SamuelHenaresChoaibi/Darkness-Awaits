@@ -1,0 +1,165 @@
+/* como-descargar.css - Estilos específicos para la página de descarga */
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes flicker {
+    0% { opacity: 0.8; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+/* Variables */
+:root {
+    --color-primario: rgba(38, 38, 38, 0.9);
+    --color-menu: rgba(43, 42, 42, 0.9);
+    --color-rojo: #dc2626;
+    --color-rojo-oscuro: #991b1b;
+    --color-gris-oscuro: #1f1f1f;
+    --altura_header: 8rem;
+}
+
+/* Estilos base */
+.download-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: radial-gradient(circle, rgba(20, 20, 20, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Efectos de animación */
+.fade-in {
+    animation: fadeIn 2s ease-in;
+}
+
+.flicker {
+    animation: flicker 1.5s infinite alternate;
+}
+
+/* Secciones de contenido */
+.download-section {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 3rem;
+    margin: 3rem auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    max-width: 900px;
+    border: 1px solid var(--color-rojo);
+}
+
+.download-section h2 {
+    font-size: 2.5rem;
+    color: var(--color-rojo);
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+}
+
+.download-section h3 {
+    font-size: 1.8rem;
+    color: var(--color-rojo);
+    margin: 2rem 0 1rem;
+    border-bottom: 2px solid var(--color-rojo);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* Estilos para los pasos de descarga */
+.download-step {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background: rgba(30, 30, 30, 0.6);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.download-step:hover {
+    background: rgba(40, 40, 40, 0.8);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(220, 38, 38, 0.2);
+}
+
+.download-step p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e5e5e5;
+}
+
+/* Enlaces */
+.download-link {
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.download-link:hover {
+    color: #3b82f6;
+    text-decoration: underline;
+}
+
+/* Imágenes (cuando se añadan) */
+.download-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid var(--color-rojo);
+    margin: 1.5rem auto;
+    display: block;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Sección de alternativas */
+.alternatives-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), 
+                url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWI1ZHVsdTFkamdoMzAxbHI3ZzAzbGc3ZHR5ejhncmNxMGxqd283eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o85xyBPM2nmoMvraw/giphy.gif') center/cover no-repeat fixed;
+    padding: 3rem;
+    margin: 3rem auto;
+    border-radius: 10px;
+    max-width: 900px;
+}
+
+.alternatives-section h2 {
+    font-size: 2.5rem;
+    color: var(--color-rojo);
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+}
+
+.alternatives-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e5e5e5;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .download-section, .alternatives-section {
+        padding: 2rem 1.5rem;
+        margin: 2rem 1rem;
+    }
+    
+    .download-section h2, .alternatives-section h2 {
+        font-size: 2rem;
+    }
+    
+    .download-section h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Clases de utilidad */
+.text-shadow-red {
+    text-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+}
+
+.padding-top-25 {
+    padding-top: 1.5rem;
+    display: inline-block;
+}

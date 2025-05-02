@@ -89,7 +89,7 @@ nav ol, ul {
 }
 
 .menu_hamburguesa:checked + .ul_links {
-    height: calc(120vh - var(--altura_header) + 75px);
+    height: calc(105vh - var(--altura_header) + 75px);
     background-color: var(--color-menu);
     z-index: 40;
 }
