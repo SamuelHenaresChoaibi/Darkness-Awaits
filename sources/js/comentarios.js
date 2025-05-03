@@ -40,12 +40,12 @@ function processApiComments(apiData) {
         if (Array.isArray(apiData.start)) {
             comments = apiData.start.map(item => new CommentsGet(
                 item.name || "Anónimo",
-                item.cominci || "Susurro indescifrable"
+                item.content || "Susurro indescifrable"
             ));
         } else if (typeof apiData.start === 'object') {
             comments = [new CommentsGet(
                 apiData.start.name || "Anónimo",
-                apiData.start.cominci || "Susurro indescifrable"
+                apiData.start.content || "Susurro indescifrable"
             )];
         }
     }
@@ -124,9 +124,9 @@ async function postComment(comment) {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            "Hi, taten": comment.api_token,
+            api_token: comment.api_token,
             name: comment.name,
-            cominci: comment.content
+            content: comment.content
         })
     });
 
