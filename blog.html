@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +17,7 @@
     <script src="sources/js/script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="blog-page">
     <div id="linterna" class="linterna z-40"></div>
     <!-- Header -->
@@ -67,18 +69,20 @@
         </div>
 
         <!-- Botón de Mutear -->
-        <button id="mute-button" class="button-responsive px-6 py-2 bg-black text-white rounded-lg hover:bg-red-800 transition tx-20">
+        <button id="mute-button"
+            class="button-responsive px-6 py-2 bg-black text-white rounded-lg hover:bg-red-800 transition tx-20">
             🔊
         </button>
+        <audio id="background-music" src="/sources/sounds/sound-ambience-sonido-ambiente-3-14040.mp3" autoplay
+            loop></audio>
     </header>
-    <audio id="background-music" src="/sources/sounds/sound-ambience-sonido-ambiente-3-14040.mp3" autoplay loop></audio>
 
     <!-- Contenido principal -->
     <main class="flex-grow bg-da">
         <!-- Sección del Blog -->
         <section class="blog-section fade-in">
             <h2 class="text-center flicker"><b>ÚLTIMAS ACTUALIZACIONES Y ARTÍCULOS</b></h2>
-            
+
             <!-- Grid de artículos (se llenará con API) -->
             <div class="posts-grid" id="posts-container">
                 <!-- Ejemplo de artículo (se generará dinámicamente) -->
@@ -87,38 +91,38 @@
                     <p>Descubre los elementos más aterradores que se ocultan en el juego.</p>
                     <a href="#" class="read-more">Leer más</a>
                 </article>
-                
+
                 <article class="post-card">
                     <h3>Creando el Ambiente de Terror</h3>
                     <p>Cómo se diseñaron los escenarios para maximizar el miedo.</p>
                     <a href="#" class="read-more">Leer más</a>
                 </article>
-                
+
                 <article class="post-card">
                     <h3>El Origen de la Historia</h3>
                     <p>Los mitos y leyendas que inspiraron Darkness Awaits.</p>
                     <a href="#" class="read-more">Leer más</a>
                 </article>
-                
+
                 <article class="post-card">
                     <h3>Pesadillas recurrentes</h3>
                     <p>Cómo el juego se inspira en los miedos más comunes.</p>
                     <a href="#" class="read-more">Leer más</a>
                 </article>
-                
+
                 <article class="post-card">
                     <h3>Criaturas ocultas</h3>
                     <p>Los monstruos más aterradores que acechan en la oscuridad.</p>
                     <a href="#" class="read-more">Leer más</a>
                 </article>
-                
+
                 <article class="post-card">
                     <h3>Psicología del terror</h3>
                     <p>Por qué el miedo nos fascina y nos aterra al mismo tiempo.</p>
                     <a href="#" class="read-more">Leer más</a>
                 </article>
             </div>
-            
+
             <!-- Paginación (se generará dinámicamente) -->
             <div class="pagination" id="pagination-container">
                 <a href="#" class="active">1</a>
@@ -164,9 +168,11 @@
             </div>
 
             <div class="mt-6">
-                <p class="text-xs">Desarrollado por <a href="#" class="text-red-500 hover:underline">Darkness Team</a></p>
+                <p class="text-xs">Desarrollado por <a href="#" class="text-red-500 hover:underline">Darkness Team</a>
+                </p>
             </div>
         </div>
     </footer>
 </body>
+
 </html>

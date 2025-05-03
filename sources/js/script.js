@@ -1,32 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener("mousemove", (e) => {
         const linterna = document.getElementById("linterna");
-        linterna.style.top = `${e.clientY}px`;
-        linterna.style.left = `${e.clientX}px`;
+        if (linterna) {
+            linterna.style.top = `${e.clientY}px`;
+            linterna.style.left = `${e.clientX}px`;
+        }
     });
 
     const audio = document.getElementById("background-music");
     const muteButton = document.getElementById("mute-button");
-    
-    audio.volume = 0.3; 
-    const playPromise = audio.play();
-    
-    if (playPromise !== undefined) {
-        playPromise.catch(error => {
-            audio.muted = true;
-            muteButton.textContent = " 🔇 ";
+
+    if (audio) {
+        audio.volume = 0.3;
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                audio.muted = true;
+                muteButton.textContent = "🔇";
+                console.warn("Autoplay bloqueado, espera interacción del usuario.");
+            });
+        }
+
+        muteButton.addEventListener("click", () => {
+            audio.muted = !audio.muted;
+            muteButton.textContent = audio.muted ? "🔇" : "🔊";
         });
     }
-
-    muteButton.addEventListener("click", () => {
-        if (audio.muted) {
-            audio.muted = false;
-            muteButton.textContent = " 🔊 ";
-        } else {
-            audio.muted = true;
-            muteButton.textContent = " 🔇 ";
-        }
-    });
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {

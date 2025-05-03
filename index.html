@@ -69,27 +69,30 @@
         </div>
 
         <!-- Botón de Mutear -->
-        <button id="mute-button" class="button-responsive px-6 py-2 bg-black text-white rounded-lg hover:bg-red-800 transition tx-20">
+        <button id="mute-button"
+            class="button-responsive px-6 py-2 bg-black text-white rounded-lg hover:bg-red-800 transition tx-20">
             🔊
         </button>
+        <audio id="background-music" src="sources/sounds/sound-ambience-sonido-ambiente-3-14040.mp3" autoplay
+            loop></audio>
     </header>
-    <audio id="background-music" src="sources/sounds/sound-ambience-sonido-ambiente-3-14040.mp3" autoplay loop></audio>
 
-    <!-- Hero Section --> 
+    <!-- Hero Section -->
     <section class="hero-section fade-in relative overflow-hidden">
         <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-0">
             <source src="sources/images/game/Cinematica.mp4" type="video/mp4">
             Tu navegador no soporta el elemento de video.
         </video>
-        
+
         <div class="hero-overlay absolute inset-0 bg-black bg-opacity-60 z-1"></div>
-        
+
         <div class="hero-content relative z-2">
             <h2 class="hero-title">DÉJATE SUCUMBIR POR LA OSCURIDAD...</h2>
-            <p class="hero-subtitle">Adéntrate en un mundo de pesadillas donde cada sombra oculta un secreto. ¿Eres lo suficientemente valiente para descubrir la verdad?</p>
+            <p class="hero-subtitle">Adéntrate en un mundo de pesadillas donde cada sombra oculta un secreto. ¿Eres lo
+                suficientemente valiente para descubrir la verdad?</p>
             <div class="hero-buttons">
                 <a href="#download" class="btn-primary">DESCARGAR AHORA</a>
-                <a href="sources/images/game/Cinematica.mp4" class="btn-secondary" >VER TRÁILER</a>
+                <a href="sources/images/game/Cinematica.mp4" class="btn-secondary">VER TRÁILER</a>
             </div>
         </div>
     </section>
@@ -175,24 +178,24 @@
     <section id="download" class="download-section">
         <!-- Fondo interactivo con partículas -->
         <div id="particles-js" class="particles-background"></div>
-        
+
         <!-- Contenido de la sección -->
         <div class="download-content">
             <h2>¿LISTO PARA EL HORROR?</h2>
             <p class="glitch-text">Descarga ahora y comienza tu viaje a la oscuridad</p>
-            
+
             <div class="download-options">
                 <a href="como-descargar.html" class="download-btn windows pulse-animation">
                     <span class="btn-icon">💻</span>
                     <span>DESCARGAR PARA WINDOWS</span>
                 </a>
-                
+
                 <a href="https://corbekun.itch.io/darkness-awaits" class="download-btn mac pulse-animation">
                     <span class="btn-icon">👾</span>
                     <span>PÁGINA PARA MAC, LINUX Y WINDOWS</span>
                 </a>
             </div>
-            
+
             <div class="blood-drips"></div>
         </div>
     </section>
