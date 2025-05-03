@@ -1,3 +1,9 @@
+class ApiToken {
+    constructor(token) {
+      this.token = token;
+    }
+  }
+
 class ClasificacionGet {
     constructor(name, puntuacion) {
         this.data = {
@@ -45,7 +51,7 @@ class CommentsPost {
         this.content = content;
         this.success = "Comments added successfully";
     }
-    
+
     getSuccess() {
         return this.success;
     }

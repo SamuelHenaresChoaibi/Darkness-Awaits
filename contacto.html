@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="sources/css/contacto.css">
     <link rel="stylesheet" href="sources/css/styles.css"> <!-- Estilos generales -->
     <script src="sources/js/script.js"></script>
+    <script src="sources/js/contacto.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -86,7 +87,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
                 <!-- Formulario con estilo de pergamino -->
                 <div class="ancient-parchment-form">
-                    <form class="eldritch-contact-form">
+                    <form id="form-contact" class="eldritch-contact-form">
                         <!-- Cabecera del pergamino -->
                         <div class="scroll-header">
                             <div class="wax-seal">
@@ -100,6 +101,15 @@
                             <label class="eldritch-label">Tu Nombre Completo</label>
                             <div class="input-container">
                                 <input type="text" name="nom" class="eldritch-input" required>
+                                <div class="ink-stain"></div>
+                            </div>
+                        </div>
+
+                        <!-- Asunto -->
+                        <div class="form-field">
+                            <label class="eldritch-label">Asunto</label>
+                            <div class="input-container">
+                                <input type="text" name="asunto" class="eldritch-input" required>
                                 <div class="ink-stain"></div>
                             </div>
                         </div>
