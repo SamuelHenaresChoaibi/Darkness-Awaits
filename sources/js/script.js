@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (playPromise !== undefined) {
         playPromise.catch(error => {
             audio.muted = true;
-            muteButton.textContent = " 🔊 ";
+            muteButton.textContent = " 🔇 ";
         });
     }
 
