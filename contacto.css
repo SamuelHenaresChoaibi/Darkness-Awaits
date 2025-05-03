@@ -353,6 +353,7 @@
     padding-bottom: 10px;
 }
 
+
 /* Responsive */
 @media (max-width: 768px) {
     .contact-section {
@@ -386,17 +387,4 @@
         width: 30px;
         height: 30px;
     }
-}
-
-/* Clases de utilidad */
-.text-shadow-red {
-    text-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
-}
-
-.margin-top-25 {
-    margin-top: 1.5rem;
-}
-
-.pulse-animation {
-    animation: pulse 2s infinite;
 }

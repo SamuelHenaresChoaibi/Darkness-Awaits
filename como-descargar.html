@@ -19,9 +19,9 @@
 <body class="download-page">
     <div id="linterna" class="linterna z-40"></div>
     <!-- Header -->
-    <header class="bg-black py-6 px-8 flex justify-between items-center fade-in shadow-xl">
+    <header class="header-responsive bg-black py-6 px-8 flex justify-between items-center fade-in shadow-xl">
         <!-- Menú Hamburguesa -->
-        <label for="menu_hamburguesa">
+        <label for="menu_hamburguesa" class="menu-responsive">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="list_icon"
                 viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
@@ -33,7 +33,7 @@
 
         <ul class="ul_links">
             <li class="li_links">
-                <a href="index.html" class="link">Inicio</a>
+                <a href="index.html" class="link-selected">Inicio</a>
             </li>
             <li class="li_links">
                 <a href="contacto.html" class="link">Contacto</a>
@@ -51,22 +51,23 @@
                 <a href="author.html" class="link">Autor</a>
             </li>
             <li class="li_links">
-                <a href="como-descargar.html" class="link-selected">¿Cómo lo descargo?</a>
+                <a href="como-descargar.html" class="link">¿Cómo lo descargo?</a>
             </li>
         </ul>
-        
+
         <!-- Título y Subtítulo -->
         <div class="text-center px-4">
+
             <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold text-red-600 flicker">
                 DARKNESS AWAITS
             </h1>
-            <p class="text-lg sm:text-xl text-gray-400 italic mt-2">
+            <p class="text-lg sm:text-xl text-gray-400 italic mt-2 frase-titulo">
                 La oscuridad te espera... ¿Estás listo?
             </p>
         </div>
-        
+
         <!-- Botón de Mutear -->
-        <button id="mute-button" class="px-6 py-2 bg-black text-white rounded-lg hover:bg-red-800 transition tx-20">
+        <button id="mute-button" class="button-responsive px-6 py-2 bg-black text-white rounded-lg hover:bg-red-800 transition tx-20">
             🔊
         </button>
     </header>

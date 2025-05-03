@@ -21,9 +21,9 @@
 <body class="bg-dark text-white font-sans">
     <div id="linterna" class="linterna z-40"></div>
 
-    <header class="bg-black py-6 px-8 flex justify-between items-center fade-in shadow-xl">
+    <header class="header-responsive bg-black py-6 px-8 flex justify-between items-center fade-in shadow-xl">
         <!-- Menú Hamburguesa -->
-        <label for="menu_hamburguesa">
+        <label for="menu_hamburguesa" class="menu-responsive">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="list_icon"
                 viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
@@ -63,13 +63,13 @@
             <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold text-red-600 flicker">
                 DARKNESS AWAITS
             </h1>
-            <p class="text-lg sm:text-xl text-gray-400 italic mt-2">
+            <p class="text-lg sm:text-xl text-gray-400 italic mt-2 frase-titulo">
                 La oscuridad te espera... ¿Estás listo?
             </p>
         </div>
 
         <!-- Botón de Mutear -->
-        <button id="mute-button" class="px-6 py-2 bg-black text-white rounded-lg hover:bg-red-800 transition tx-20">
+        <button id="mute-button" class="button-responsive px-6 py-2 bg-black text-white rounded-lg hover:bg-red-800 transition tx-20">
             🔊
         </button>
     </header>
@@ -237,9 +237,6 @@
             </div>
         </div>
     </footer>
-
-    <audio id="background-music" src="sounds/sound-ambience-sonido-ambiente-3-14040.mp3" autoplay loop></audio>
-
 </body>
 
 </html>

@@ -17,7 +17,6 @@
     font-size: 2.5rem;
     color: var(--color-rojo);
     text-align: center;
-    font-family: 'Cinzel', serif;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     text-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
@@ -47,7 +46,6 @@
 
 .form-label {
     display: block;
-    font-family: 'Cinzel', serif;
     font-size: 1.2rem;
     color: #e5e5e5;
     margin-bottom: 0.5rem;
@@ -61,7 +59,6 @@
     border: 1px solid rgba(220, 38, 38, 0.3);
     background: rgba(30, 30, 30, 0.9);
     border-radius: 4px;
-    font-family: 'Cinzel', serif;
     color: #e5e5e5;
     transition: all 0.3s ease;
 }
@@ -81,7 +78,6 @@
 .form-note {
     font-size: 0.85rem;
     color: #b3b3b3;
-    font-style: italic;
     margin-top: 0.5rem;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 }
@@ -90,7 +86,6 @@
 .comment-list-title {
     font-size: 1.8rem;
     color: var(--color-rojo);
-    font-family: 'Cinzel', serif;
     margin-bottom: 1rem;
     text-shadow: 0 0 5px rgba(220, 38, 38, 0.5);
 }
@@ -132,7 +127,6 @@
 .comment-author {
     font-size: 1.2rem;
     color: var(--color-rojo);
-    font-family: 'Cinzel', serif;
     margin-bottom: 0.5rem;
     text-shadow: 0 0 5px rgba(220, 38, 38, 0.5);
 }
@@ -146,7 +140,6 @@
 .comment-signature {
     font-size: 0.85rem;
     color: #b3b3b3;
-    font-style: italic;
     text-align: right;
     margin-top: 0.5rem;
 }
@@ -179,4 +172,4 @@
     .form-textarea {
         height: 100px;
     }
-}
+   }

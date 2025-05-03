@@ -238,7 +238,9 @@ video {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    padding: 5rem 15rem;
+    padding: 5rem 10rem;
+
+
     background-color: var(--color-gris-oscuro);
 }
 
@@ -595,6 +597,48 @@ video {
         flex-direction: column;
         align-items: center;
     }
+
+    .features-section{
+        padding: 2rem 2rem;
+    }
+
+    .link{
+        font-size: 25px;
+    }
+
+    .link-selected{
+        font-size: 25px;
+    }
+
+    .menu_hamburguesa:checked + .ul_links {
+        height: calc(90vh - var(--altura_header) + 75px);
+    }
+}
+
+@media (max-height: 780px) {
+    .menu_hamburguesa:checked + .ul_links {
+        height: calc(100vh - var(--altura_header) + 75px);
+    }    .link{
+        font-size: 30px;
+    }
+
+    .link-selected{
+        font-size: 30px;
+    }
+}
+
+@media (max-height:525px) {
+    .menu_hamburguesa:checked + .ul_links {
+        height: calc(240vh - var(--altura_header) + 75px);
+    }
+
+    .link{
+        font-size: 35px;
+    }
+
+    .link-selected{
+        font-size: 35px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -613,5 +657,86 @@ video {
     
     .testimonial-card {
         max-width: 100%;
+    }
+
+    .flicker{
+        font-size: 2rem;
+    }
+
+
+
+    .menu_hamburguesa:checked + .ul_links {
+        height: calc(100vh - var(--altura_header) + 75px);
+    }
+}
+
+@media (max-width: 500px) {
+    .flicker{
+        font-size: 1.5rem;
+        padding-top: 10px;
+    }
+
+    .frase-titulo{
+        font-size: 0.75rem;
+    }
+
+    .button-responsive{
+        padding-right: 10px;
+        padding-left: 0;
+        font-size: 25px;
+    }
+
+    .header-responsive{
+        padding: 0;
+    }
+    .menu-responsive{
+        padding-left: 15px;
+        font-size: 5px;
+    }
+
+    .link{
+        font-size: 30px;
+    }
+
+    .link-selected{
+        font-size: 30px;
+    }
+
+    .menu_hamburguesa:checked + .ul_links {
+        height: calc(95vh - var(--altura_header) + 75px);
+    }
+}
+
+@media (max-width: 500px) {
+    .flicker{
+        font-size: 1.4rem;
+        padding-top: 10px;
+    }
+
+    .frase-titulo{
+        font-size: 0.75rem;
+    }
+
+    .button-responsive{
+        padding-right: 10px;
+        padding-left: 0;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 315px) {
+    .flicker{
+        font-size: 1.4rem;
+        padding-top: 10px;
+    }
+
+    .frase-titulo{
+        font-size: 0.65rem;
+    }
+
+    .button-responsive{
+        padding-right: 10px;
+        padding-left: 0;
+        font-size: 25px;
     }
 }
