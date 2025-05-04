@@ -575,7 +575,28 @@ video {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
+    .menu_hamburguesa {
+        display: none !important;
+    }
+
+    .link, .link-selected {
+        font-size: 1.2rem;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
     iframe {
         width: 99%;
     }
@@ -611,132 +632,219 @@ video {
     }
 
     .menu_hamburguesa:checked + .ul_links {
-        height: calc(90vh - var(--altura_header) + 75px);
-    }
-}
-
-@media (max-height: 780px) {
-    .menu_hamburguesa:checked + .ul_links {
-        height: calc(100vh - var(--altura_header) + 75px);
-    }    .link{
-        font-size: 30px;
-    }
-
-    .link-selected{
-        font-size: 30px;
-    }
-}
-
-@media (max-height:525px) {
-    .menu_hamburguesa:checked + .ul_links {
-        height: calc(240vh - var(--altura_header) + 75px);
-    }
-
-    .link{
-        font-size: 35px;
-    }
-
-    .link-selected{
-        font-size: 35px;
+        height: calc(70vh - var(--altura_header) + 75px);
     }
 }
 
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
+    :root {
+        --altura_header: 7.5rem;
+        --padding_left_right: 0.8rem;
     }
-    
+
+    .menu_hamburguesa:checked + .ul_links {
+        height: calc(70vh - var(--altura_header) + 75px);
+        background-color: var(--color-menu);
+        z-index: 40;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
     .game-stats {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1rem;
     }
-    
+
     .stat-number {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
     }
-    
+
+    .about-section h2, .gallery-section h2, .testimonials-section h2, .download-section h2, .newsletter-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .features-section {
+        grid-template-columns: 1fr;
+        padding: 1.5rem var(--padding_left_right);
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
     .testimonial-card {
         max-width: 100%;
     }
 
-    .flicker{
-        font-size: 2rem;
+    .link, .link-selected {
+        font-size: 1.3rem;
     }
 
+    .newsletter-form {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 
+    .newsletter-form input {
+        border-radius: 5px;
+    }
 
-    .menu_hamburguesa:checked + .ul_links {
-        height: calc(100vh - var(--altura_header) + 75px);
+    .newsletter-form button {
+        border-radius: 5px;
     }
 }
 
 @media (max-width: 500px) {
-    .flicker{
+    :root {
+        --altura_header: 4rem;
+        --padding_left_right: 0.6rem;
+    }
+
+    .menu_hamburguesa:checked + .ul_links {
+        height: calc(65vh - var(--altura_header) + 75px);
+        background-color: var(--color-menu);
+        z-index: 40;
+    }
+
+    .hero-title {
+        font-size: 1.6rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .hero-buttons {
+        gap: 0.5rem;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.7rem;
+    }
+
+    .flicker {
         font-size: 1.5rem;
-        padding-top: 10px;
+        margin-top: 10px;
+        position: relative;
+        top: 0.5rem;
     }
 
-    .frase-titulo{
-        font-size: 0.75rem;
+    .frase-titulo {
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+        position: relative;
+        bottom: 0.5rem;
     }
 
-    .button-responsive{
-        padding-right: 10px;
-        padding-left: 0;
-        font-size: 25px;
+    .button-responsive {
+        padding: 0.4rem;
+        font-size: 1rem;
     }
 
-    .header-responsive{
-        padding: 0;
-    }
-    .menu-responsive{
-        padding-left: 15px;
-        font-size: 5px;
+    .header-responsive {
+        padding: 0 var(--padding_left_right);
     }
 
-    .link{
-        font-size: 30px;
+    .menu-responsive {
+        padding-left: 0.8rem;
     }
 
-    .link-selected{
-        font-size: 30px;
+    .link, .link-selected {
+        font-size: 1.2rem;
     }
 
-    .menu_hamburguesa:checked + .ul_links {
-        height: calc(95vh - var(--altura_header) + 75px);
+    .tx-20 {
+        font-size: 1rem;
+    }
+
+    .linterna {
+        width: 80px;
+        height: 80px;
+        box-shadow: 0 0 40px 15px rgba(255, 255, 200, 0.2);
     }
 }
 
-@media (max-width: 500px) {
-    .flicker{
+@media (max-width: 360px) {
+    :root {
+        --altura_header: 5rem;
+        --padding_left_right: 0.5rem;
+    }
+
+    .hero-title {
         font-size: 1.4rem;
-        padding-top: 10px;
     }
 
-    .frase-titulo{
-        font-size: 0.75rem;
+    .hero-subtitle {
+        font-size: 0.7rem;
     }
 
-    .button-responsive{
-        padding-right: 10px;
-        padding-left: 0;
-        font-size: 25px;
-    }
-}
-
-@media (max-width: 315px) {
-    .flicker{
-        font-size: 1.4rem;
-        padding-top: 10px;
+    .hero-content {
+        padding: 0.8rem;
     }
 
-    .frase-titulo{
+    .hero-buttons {
+        gap: 0.4rem;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 0.4rem 0.6rem;
         font-size: 0.65rem;
     }
 
-    .button-responsive{
-        padding-right: 10px;
-        padding-left: 0;
-        font-size: 25px;
+    .flicker {
+        font-size: 1.5rem;
     }
+
+    .frase-titulo {
+        font-size: 0.75rem;
+    }
+
+    .button-responsive {
+        padding: 0.3rem;
+        font-size: 0.9rem;
+    }
+
+    .link, .link-selected {
+        font-size: 1rem;
+    }
+
+    .features-section {
+        padding: 1rem var(--padding_left_right);
+    }
+
+    .feature-card {
+        padding: 0.8rem;
+    }
+
+    .feature-icon {
+        font-size: 1.8rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1rem;
+    }
+
+    .feature-card p {
+        font-size: 0.7rem;
+    }
+
+    .menu_hamburguesa:checked + .ul_links {
+        height: calc(55vh - var(--altura_header) + 75px);
+        background-color: var(--color-menu);
+        z-index: 40;
+    }
+
+
 }

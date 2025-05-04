@@ -58,6 +58,8 @@
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
     max-width: 1400px;
     border: 1px solid var(--color-rojo);
+    justify-content: center;
+    align-items: center;
 }
 
 .blog-section h2 {
@@ -133,7 +135,7 @@
 .posts-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 4rem;
     margin-top: 3rem;
 }
 

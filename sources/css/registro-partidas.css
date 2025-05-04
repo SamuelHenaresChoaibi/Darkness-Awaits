@@ -11,100 +11,6 @@
 
 @keyframes ms-light {}
 
-:root {
-    --color-primario: rgba(38, 38, 38, 0.9);
-    --color-menu: rgba(43, 42, 42, 0.9);
-    --filtro: blur(5px);
-    --altura_header: 8rem;
-    --padding_left_right: 2rem;
-    --ancho_maximo: 1200px;
-}
-
-@media (max-width: 1024px) {
-    iframe { width: 99%; }
-}
-
-header {
-    height: var(--altura_header);
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.content-section {
-    flex-grow: 1;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 3.125rem;
-    height: var(--altura_header);
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: var(--color-primario);
-    backdrop-filter: blur(5px);
-    color: white;
-}
-
-nav a {
-    text-decoration: none;
-}
-
-nav ol, ul {
-    list-style: none;
-}
-
-.menu_hamburguesa {
-    display: none;
-}
-
-.menu_hamburguesa:checked + .ul_links {
-    height: calc(100vh - var(--altura_header) + 75px);
-    background-color: var(--color-menu);
-    z-index: 40;
-}
-
-.ul_links {
-    width: 100%;
-    position: absolute;
-    top: var(--altura_header);
-    left: 0;
-    height: 0;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    transition: all .3s;
-}
-
-.link {
-    font-size: 3em;
-    color: white;
-    font-weight: bold;
-    transition: all 0.5s ease-in-out;
-}
-
-.link:hover {
-    transform: scale(1.05);
-    color: hwb(0 33% 0% / 0.55);
-}
-
-.link-selected {
-    font-size: 3em;
-    color: rgb(157, 156, 156);
-    opacity: 50%;
-    font-weight: bold;
-    transition: all 0.5s ease-in-out;
-}
 
 #about-section {
     min-height: 100vh;
@@ -187,6 +93,7 @@ nav ol, ul {
     position: relative;
     animation: fadeIn 1.5s ease-in;
     backdrop-filter: blur(5px);
+    margin-top: 5rem;
 }
 
 /* Altar Title */
@@ -338,6 +245,13 @@ nav ol, ul {
         padding: 1.5rem;
         margin: 1rem;
         border-width: 1px;
+        margin-top: 5rem;
+        
+    }
+
+    .registration-section{
+        margin:0px;
+        padding:20px;
     }
 
     .altar-title {
