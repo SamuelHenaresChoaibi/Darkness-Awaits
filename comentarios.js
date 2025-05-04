@@ -1,15 +1,13 @@
-import { ApiToken, CommentsGet, CommentsPost } from './modelos.js';
-
-
 const API_BASE_URL = 'https://phpstack-1076337-5399863.cloudwaysapps.com';
-const API_TOKEN = new ApiToken('pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS');
+const API_TOKEN = 'fyWGkq96GJroFQBn07JGDJL2Qp7aoYVaqduQKOF5HGO97AdbGagdOeoynKyF';
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         await loadComments();
         const form = document.getElementById('formularioComentario');
-        form.addEventListener('submit', handleCommentSubmit);
-
+        if (form) {
+            form.addEventListener('submit', handleCommentSubmit);
+        }
     } catch (error) {
         console.error('Error inicializando:', error);
         showError('La oscuridad interrumpe la conexión...');
@@ -19,7 +17,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 // Función para cargar comentarios desde la API
 async function loadComments() {
     try {
-        const response = await fetch(`${API_BASE_URL}/api/comments/${API_TOKEN.token}`);
+        const response = await fetch(`${API_BASE_URL}/api/comments/${API_TOKEN}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
 
         if (!response.ok) {
             throw new Error(`Error HTTP: ${response.status}`);
@@ -28,37 +31,36 @@ async function loadComments() {
         const apiData = await response.json();
         const comments = processApiComments(apiData);
         renderComments(comments);
-
     } catch (error) {
         console.error('Error cargando comentarios:', error);
         showError('Los susurros no pueden ser escuchados ahora...');
     }
 }
 
-// Procesar datos de la API y convertirlos a objetos CommentsGet
+// Procesar datos de la API y convertirlos a objetos simples
 function processApiComments(apiData) {
     let comments = [];
 
     if (apiData.start) {
         if (Array.isArray(apiData.start)) {
-            comments = apiData.start.map(item => new CommentsGet(
-                item.name || "Anónimo",
-                item.content || "Susurro indescifrable"
-            ));
+            comments = apiData.start.map(item => ({
+                name: item.name || "Anónimo",
+                content: item.content || "Susurro indescifrable"
+            }));
         } else if (typeof apiData.start === 'object') {
-            comments = [new CommentsGet(
-                apiData.start.name || "Anónimo",
-                apiData.start.content || "Susurro indescifrable"
-            )];
+            comments = [{
+                name: apiData.start.name || "Anónimo",
+                content: apiData.start.content || "Susurro indescifrable"
+            }];
         }
     }
 
     // Si no hay comentarios, mostrar uno por defecto
     if (comments.length === 0) {
-        comments = [new CommentsGet(
-            "Susurrante Anónimo",
-            "Un eco desde el abismo..."
-        )];
+        comments = [{
+            name: "Susurrante Anónimo",
+            content: "Un eco desde el abismo..."
+        }];
     }
 
     return comments;
@@ -73,8 +75,8 @@ function renderComments(comments) {
         const commentElement = document.createElement('div');
         commentElement.className = 'shadow-comment';
         commentElement.innerHTML = `
-            <h4 class="comment-author">${escapeHtml(comment.data.name)}</h4>
-            <p class="comment-text">${escapeHtml(comment.data.content)}</p>
+            <h4 class="comment-author">${escapeHtml(comment.name)}</h4>
+            <p class="comment-text">${escapeHtml(comment.content)}</p>
             <p class="comment-signature">Invocado en la oscuridad</p>
         `;
         container.appendChild(commentElement);
@@ -100,13 +102,15 @@ async function handleCommentSubmit(event) {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Enviando a las sombras...';
 
-        const newComment = new CommentsPost(API_TOKEN.token, name, content);
+        const newComment = {
+            api_token: API_TOKEN,
+            name: name,
+            content: content
+        };
         const response = await postComment(newComment);
-        showSuccess(newComment.getSuccess());
 
         await loadComments();
         form.reset();
-
     } catch (error) {
         console.error('Error enviando comentario:', error);
         showError('El susurro se perdió en el vacío...');
@@ -124,13 +128,9 @@ async function postComment(comment) {
     const response = await fetch(`${API_BASE_URL}/api/comments`, {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-            api_token: comment.api_token,
-            name: comment.name,
-            content: comment.content
-        })
+        body: JSON.stringify(comment)
     });
 
     if (!response.ok) {
@@ -140,7 +140,7 @@ async function postComment(comment) {
     return await response.json();
 }
 
-// Funciones auxiliares
+// Escapar HTML para prevenir XSS
 function escapeHtml(unsafe) {
     return unsafe
         .replace(/&/g, "&amp;")
@@ -150,10 +150,12 @@ function escapeHtml(unsafe) {
         .replace(/'/g, "&#039;");
 }
 
+// Mostrar mensaje de error
 function showError(message) {
     alert(`Error: ${message}`);
 }
 
+// Mostrar mensaje de éxito
 function showSuccess(message) {
     alert(`Éxito: ${message}`);
 }

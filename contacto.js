@@ -1,11 +1,9 @@
-import { ApiToken, ContactPost } from './modelos.js';
-
-const API_TOKEN = new ApiToken('pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS');
-const API_BASE_URL = new ApiToken('https://phpstack-1076337-5399863.cloudwaysapps.com');
+const API_BASE_URL = 'https://phpstack-1076337-5399863.cloudwaysapps.com';
+const API_TOKEN = 'fyWGkq96GJroFQBn07JGDJL2Qp7aoYVaqduQKOF5HGO97AdbGagdOeoynKyF';
 
 document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('form-contact');
-    if(contactForm){ 
+    if (contactForm) {
         contactForm.addEventListener('submit', handleContactSubmit);
     }
 });
@@ -31,7 +29,13 @@ async function handleContactSubmit(event) {
         return;
     }
     
-    const contactData = new ContactPost(API_TOKEN, nombre, email, asunto, mensaje);
+    const contactData = {
+        token: API_TOKEN,
+        nombre: nombre,
+        email: email,
+        asunto: asunto,
+        mensaje: mensaje
+    };
     
     try {
         const submitBtn = form.querySelector('button[type="submit"]');
@@ -59,7 +63,7 @@ async function sendContactToApi(contactData) {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(contactData.toApiFormat())
+        body: JSON.stringify(contactData)
     });
     
     if (!response.ok) {
