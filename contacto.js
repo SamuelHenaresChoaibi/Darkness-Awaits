@@ -30,7 +30,7 @@ async function handleContactSubmit(event) {
     }
     
     const contactData = {
-        token: API_TOKEN,
+        api_token: API_TOKEN,
         nombre: nombre,
         email: email,
         asunto: asunto,
@@ -44,7 +44,6 @@ async function handleContactSubmit(event) {
         
         const response = await sendContactToApi(contactData);
         
-        showSuccess('Mensaje enviado con éxito. Las sombras te responderán pronto.');
         form.reset();
         
     } catch (error) {
