@@ -41,16 +41,16 @@ async function loadComments() {
 function processApiComments(apiData) {
     let comments = [];
 
-    if (apiData.start) {
-        if (Array.isArray(apiData.start)) {
-            comments = apiData.start.map(item => ({
+    if (apiData.data) {
+        if (Array.isArray(apiData.data)) {
+            comments = apiData.data.map(item => ({
                 name: item.name || "Anónimo",
                 content: item.content || "Susurro indescifrable"
             }));
-        } else if (typeof apiData.start === 'object') {
+        } else if (typeof apiData.data === 'object') {
             comments = [{
-                name: apiData.start.name || "Anónimo",
-                content: apiData.start.content || "Susurro indescifrable"
+                name: apiData.data.name || "Anónimo",
+                content: apiData.data.content || "Susurro indescifrable"
             }];
         }
     }
