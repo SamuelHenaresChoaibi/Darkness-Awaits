@@ -37,25 +37,18 @@ async function loadPosts() {
 function processApiPosts(apiData) {
     let posts = [];
 
-    if (apiData.start) {
-        if (Array.isArray(apiData.start)) {
-            posts = apiData.start.map(item => ({
-                title: item.title || "Título desconocido",
-                content: item.content || "Contenido no disponible"
-            }));
-        } else if (typeof apiData.start === 'object') {
-            posts = [{
-                title: apiData.start.title || "Título desconocido",
-                content: apiData.start.content || "Contenido no disponible"
-            }];
-        }
+    if (apiData.data && Array.isArray(apiData.data)) {
+        posts = apiData.data.map(item => ({
+            title: item.title || "Sin notícias",
+            content: item.content || "Aún no hay ninguna noticia",
+        }));
     }
 
-    // Si no hay publicaciones, mostrar una por defecto
+    // Si no hay registros, mostrar uno por defecto
     if (posts.length === 0) {
         posts = [{
-            title: "Eco de la Oscuridad",
-            content: "Un susurro perdido en el blog..."
+            title: "Sin notícias",
+            content: "Aún no hay ninguna noticia o actualización disponible."
         }];
     }
 
