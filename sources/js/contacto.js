@@ -1,3 +1,5 @@
+import { ApiToken, ContactPost } from './modelos.js';
+
 const API_TOKEN = new ApiToken('pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS');
 const API_BASE_URL = new ApiToken('https://phpstack-1076337-5399863.cloudwaysapps.com');
 

@@ -1,10 +1,10 @@
-class ApiToken {
+export class ApiToken {
     constructor(token) {
       this.token = token;
     }
   }
 
-class ClasificacionGet {
+  export class ClasificacionGet {
     constructor(name, puntuacion) {
         this.data = {
             name: name,
@@ -13,7 +13,7 @@ class ClasificacionGet {
     }
 }
 
-class ClasificacionPost {
+export class ClasificacionPost {
     constructor(api_token, name, puntuacion) {
         this.api_token = api_token;
         this.name = name;
@@ -26,7 +26,7 @@ class ClasificacionPost {
     }
 }
 
-class PostsGet {
+export class PostsGet {
     constructor(title, content) {
         this.data = {
             title: title,
@@ -35,7 +35,7 @@ class PostsGet {
     }
 }
 
-class CommentsGet {
+export class CommentsGet {
     constructor(name, content) {
         this.data = {
             name: name,
@@ -44,7 +44,7 @@ class CommentsGet {
     }
 }
 
-class CommentsPost {
+export class CommentsPost {
     constructor(api_token, name, content) {
         this.api_token = api_token;
         this.name = name;
@@ -57,7 +57,7 @@ class CommentsPost {
     }
 }
 
-class ContactPost {
+export class ContactPost {
     constructor(api_token, nombre, email, asunto, mensaje) {
         this.api_token = api_token;
         this.nombre = nombre;
