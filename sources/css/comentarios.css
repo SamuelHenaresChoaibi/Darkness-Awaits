@@ -1,97 +1,89 @@
-/* Shadow Altar Container */
+:root {
+    --color-rojo: #dc2626;
+}
+
 .shadow-altar {
     background: rgba(10, 10, 10, 0.9);
     border: 2px solid var(--color-rojo);
     box-shadow: 0 0 20px rgba(220, 38, 38, 0.3), inset 0 0 10px rgba(220, 38, 38, 0.1);
-    padding: 2rem;
-    margin: 2rem auto;
+    padding: 1.5rem;
+    margin: 1.5rem auto;
     max-width: 900px;
     border-radius: 10px;
-    position: relative;
     animation: fadeIn 1.5s ease-in;
     backdrop-filter: blur(5px);
 }
 
-/* Altar Title */
 .altar-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--color-rojo);
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     text-transform: uppercase;
     text-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
     animation: flicker 3s infinite alternate;
 }
 
-/* Altar Content */
 .altar-content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
-/* Form Styles */
 .altar-form {
     background: rgba(20, 20, 20, 0.8);
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 8px;
     border: 1px solid rgba(220, 38, 38, 0.3);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    animation: pulse 2s infinite;
 }
 
 .form-group {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 .form-label {
-    display: block;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #e5e5e5;
-    margin-bottom: 0.5rem;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    margin-bottom: 0.4rem;
 }
 
 .form-input,
 .form-textarea {
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.5rem;
     border: 1px solid rgba(220, 38, 38, 0.3);
     background: rgba(30, 30, 30, 0.9);
     border-radius: 4px;
     color: #e5e5e5;
-    transition: all 0.3s ease;
+    font-size: 0.9rem;
 }
 
 .form-input:focus,
 .form-textarea:focus {
-    outline: none;
     border-color: var(--color-rojo);
     box-shadow: 0 0 8px rgba(220, 38, 38, 0.5);
 }
 
 .form-textarea {
-    height: 140px;
+    height: 120px;
     resize: vertical;
 }
 
 .form-note {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #b3b3b3;
-    margin-top: 0.5rem;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    margin-top: 0.4rem;
 }
 
-/* Comment List */
 .comment-list-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--color-rojo);
-    margin-bottom: 1rem;
-    text-shadow: 0 0 5px rgba(220, 38, 38, 0.5);
+    margin-bottom: 0.8rem;
 }
 
 .comment-list-container {
-    max-height: 320px;
+    max-height: 250px;
     overflow-y: auto;
     padding-right: 0.5rem;
 }
@@ -111,65 +103,111 @@
 
 .shadow-comment {
     background: rgba(20, 20, 20, 0.85);
-    padding: 1rem;
-    margin-bottom: 1rem;
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
     border-left: 4px solid var(--color-rojo);
     border-radius: 0 6px 6px 0;
-    transition: all 0.3s ease;
-    animation: fadeIn 1s ease-in;
 }
 
 .shadow-comment:hover {
-    transform: translateX(5px);
-    box-shadow: 0 0 15px rgba(220, 38, 38, 0.3);
+    transform: translateX(3px);
 }
 
 .comment-author {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--color-rojo);
-    margin-bottom: 0.5rem;
-    text-shadow: 0 0 5px rgba(220, 38, 38, 0.5);
+    margin-bottom: 0.4rem;
 }
 
 .comment-text {
     color: #e5e5e5;
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 0.9rem;
 }
 
 .comment-signature {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #b3b3b3;
     text-align: right;
-    margin-top: 0.5rem;
 }
 
-.bg-da{
+.bg-da {
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), 
-    url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWI1ZHVsdTFkamdoMzAxbHI3ZzAzbGc3ZHR5ejhncmNxMGxqd283eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o85xyBPM2nmoMvraw/giphy.gif') center/cover no-repeat fixed;
+                url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWI1ZHVsdTFkamdoMzAxbHI3ZzAzbGc3ZHR5ejhncmNxMGxqd283eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o85xyBPM2nmoMvraw/giphy.gif') center/cover no-repeat fixed;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .shadow-altar {
-        padding: 1.5rem;
+        padding: 1rem;
         margin: 1rem;
-        border-width: 1px;
     }
 
     .altar-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 6rem;
+        --altura_header: 6rem;
     }
 
-    .comment-list-title {
+    .shadow-altar {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .altar-title {
         font-size: 1.5rem;
     }
 
+    .comment-list-title {
+        font-size: 1.3rem;
+    }
+
     .form-label {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .form-textarea {
         height: 100px;
     }
-   }
+
+    .form-input, .form-textarea {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .altar-title {
+        font-size: 1.3rem;
+    }
+
+    .comment-list-title {
+        font-size: 1.2rem;
+    }
+
+    .shadow-comment {
+        padding: 0.6rem;
+    }
+
+    .comment-author {
+        font-size: 1rem;
+    }
+
+    .comment-text {
+        font-size: 0.8rem;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes flicker {
+    0% { opacity: 0.8; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
