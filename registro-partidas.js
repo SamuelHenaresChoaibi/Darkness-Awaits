@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 // Función para cargar registros desde la API
 async function loadRecords() {
     try {
-        const response = await fetch(`${API_BASE_URL}/api/classifications/${API_TOKEN}`, {
+        const response = await fetch(`${API_BASE_URL}/api/classification/${API_TOKEN}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -41,28 +41,18 @@ async function loadRecords() {
 function processApiRecords(apiData) {
     let records = [];
 
-    if (apiData.start) {
-        if (Array.isArray(apiData.start)) {
-            records = apiData.start.map(item => ({
-                name: item.name || "Jugador Anónimo",
-                puntuacion: item.puntuacion || 0,
-                nivel: item.nivel || 0
-            }));
-        } else if (typeof apiData.start === 'object') {
-            records = [{
-                name: apiData.start.name || "Jugador Anónimo",
-                puntuacion: apiData.start.puntuacion || 0,
-                nivel: apiData.start.nivel || 0
-            }];
-        }
+    if (apiData.data && Array.isArray(apiData.data)) {
+        records = apiData.data.map(item => ({
+            name: item.name || "Jugador Anónimo",
+            puntuacion: item.puntuacion || 0
+        }));
     }
 
     // Si no hay registros, mostrar uno por defecto
     if (records.length === 0) {
         records = [{
             name: "Jugador Anónimo",
-            puntuacion: 1000,
-            nivel: 5
+            puntuacion: 1000
         }];
     }
 
@@ -81,7 +71,6 @@ function renderRecords(records) {
         tr.innerHTML = `
             <td>${escapeHtml(record.name)}</td>
             <td>${escapeHtml(record.puntuacion.toString())}</td>
-            <td>${escapeHtml(record.nivel.toString())}</td>
             <td>${date}</td>
         `;
         tbody.appendChild(tr);
@@ -96,10 +85,9 @@ async function handleRecordSubmit(event) {
     const formData = new FormData(form);
     const name = formData.get('jugador') || "Jugador Anónimo";
     const score = parseInt(formData.get('puntuacion')) || 0;
-    const level = parseInt(formData.get('nivel')) || 0;
 
-    if (score <= 0 || level <= 0) {
-        showError('La puntuación y el nivel deben ser mayores a 0.');
+    if (score <= 0) {
+        showError('La puntuación debe ser mayor a 0.');
         return;
     }
 
@@ -112,7 +100,6 @@ async function handleRecordSubmit(event) {
             api_token: API_TOKEN,
             name: name,
             puntuacion: score,
-            nivel: level
         };
         await postRecord(newRecord);
         showSuccess('Registro inscrito con éxito en el altar.');
@@ -133,7 +120,7 @@ async function handleRecordSubmit(event) {
 
 // Función para enviar registro a la API
 async function postRecord(record) {
-    const response = await fetch(`${API_BASE_URL}/api/classifications`, {
+    const response = await fetch(`${API_BASE_URL}/api/classification`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
