@@ -1,19 +1,40 @@
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes flicker {
-    0% { opacity: 0.8; }
-    50% { opacity: 0.3; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* Variables */
@@ -81,7 +102,8 @@ nav a {
     text-decoration: none;
 }
 
-nav ol, ul {
+nav ol,
+ul {
     list-style: none;
 }
 
@@ -102,7 +124,7 @@ nav ol, ul {
     transition: transform 0.3s ease;
 }
 
-.menu_hamburguesa:checked + .ul_links {
+.menu_hamburguesa:checked+.ul_links {
     height: calc(100vh - var(--altura_header));
     background-color: var(--color-menu);
     z-index: 40;
@@ -222,10 +244,10 @@ nav ol, ul {
 
 .hero-overlay {
     z-index: 1;
-    background: linear-gradient(to bottom, 
-        rgba(0, 0, 0, 0.7) 0%, 
-        rgba(0, 0, 0, 0.3) 50%, 
-        rgba(0, 0, 0, 0.7) 100%);
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.7) 0%,
+            rgba(0, 0, 0, 0.3) 50%,
+            rgba(0, 0, 0, 0.7) 100%);
 }
 
 .hero-content {
@@ -269,7 +291,8 @@ video {
     margin-top: 2rem;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
     padding: 1rem 2rem;
     border-radius: 5px;
     font-weight: bold;
@@ -345,8 +368,8 @@ video {
 .about-section {
     padding: 5rem 2rem;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
-                url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWI1ZHVsdTFkamdoMzAxbHI3ZzAzbGc3ZHR5ejhncmNxMGxqd283eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o85xyBPM2nmoMvraw/giphy.gif') center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWI1ZHVsdTFkamdoMzAxbHI3ZzAzbGc3ZHR5ejhncmNxMGxqd283eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o85xyBPM2nmoMvraw/giphy.gif') center/cover no-repeat fixed;
 }
 
 .about-section h2 {
@@ -431,8 +454,8 @@ video {
 .testimonials-section {
     padding: 5rem 2rem;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), 
-                url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWI1ZHVsdTFkamdoMzAxbHI3ZzAzbGc3ZHR5ejhncmNxMGxqd283eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o85xyBPM2nmoMvraw/giphy.gif') center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+        url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWI1ZHVsdTFkamdoMzAxbHI3ZzAzbGc3ZHR5ejhncmNxMGxqd283eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o85xyBPM2nmoMvraw/giphy.gif') center/cover no-repeat fixed;
 }
 
 .testimonials-section h2 {
@@ -555,8 +578,8 @@ video {
 .newsletter-section {
     padding: 5rem 2rem;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), 
-                url('https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+        url('https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat fixed;
 }
 
 .newsletter-section h2 {
@@ -636,8 +659,8 @@ video {
 }
 
 .techinc-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), 
-    url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWI1ZHVsdTFkamdoMzAxbHI3ZzAzbGc3ZHR5ejhncmNxMGxqd283eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o85xyBPM2nmoMvraw/giphy.gif') center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+        url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWI1ZHVsdTFkamdoMzAxbHI3ZzAzbGc3ZHR5ejhncmNxMGxqd283eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o85xyBPM2nmoMvraw/giphy.gif') center/cover no-repeat fixed;
 }
 
 @media (max-width: 360px) {
@@ -645,30 +668,39 @@ video {
         --altura_header: 4.5rem;
         --padding_left_right: 0.5rem;
     }
-    .menu_hamburguesa:checked + .ul_links {
+
+    .menu_hamburguesa:checked+.ul_links {
         height: calc(100vh - var(--altura_header));
     }
+
     .header-responsive {
         padding: 0.3rem var(--padding_left_right);
     }
+
     .flicker {
         font-size: 1.3rem;
     }
+
     .frase-titulo {
         font-size: 0.7rem;
     }
+
     .button-responsive {
         padding: 0.2rem 0.5rem;
         font-size: 0.7rem;
     }
+
     .menu-responsive {
         padding-left: 0.2rem;
     }
+
     .list_icon {
         width: 1rem;
         height: 1rem;
     }
-    .link, .link-selected {
+
+    .link,
+    .link-selected {
         font-size: 1rem;
         padding: 0.2rem;
     }
@@ -679,45 +711,57 @@ video {
         --altura_header: 5rem;
         --padding_left_right: 0.75rem;
     }
-    .menu_hamburguesa:checked + .ul_links {
+
+    .menu_hamburguesa:checked+.ul_links {
         height: calc(100vh - var(--altura_header));
     }
+
     .header-responsive {
         padding: 0.5rem var(--padding_left_right);
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
     }
+
     .header-responsive .text-center {
         width: 100%;
         padding: 0;
     }
+
     .flicker {
         font-size: 1.5rem;
         margin-top: 0.5rem;
     }
+
     .frase-titulo {
         font-size: 0.8rem;
         margin-bottom: 0.5rem;
     }
+
     .button-responsive {
         padding: 0rem 0rem;
         font-size: 0.8rem;
     }
+
     .menu-responsive {
         padding-left: 0.3rem;
     }
+
     .list_icon {
         width: 1.2rem;
         height: 1.2rem;
     }
-    .link, .link-selected {
+
+    .link,
+    .link-selected {
         font-size: 1.1rem;
         padding: 0.3rem;
     }
+
     .features-section {
         padding: 4rem 1rem;
     }
+
     .hero-title {
         font-size: 3rem;
     }
@@ -728,31 +772,40 @@ video {
         --altura_header: 6rem;
         --padding_left_right: 1rem;
     }
-    .menu_hamburguesa:checked + .ul_links {
+
+    .menu_hamburguesa:checked+.ul_links {
         height: calc(100vh - var(--altura_header));
     }
+
     .header-responsive {
         padding: 0.5rem var(--padding_left_right);
         flex-wrap: wrap;
     }
+
     .flicker {
         font-size: 1.8rem;
     }
+
     .frase-titulo {
         font-size: 0.9rem;
     }
+
     .button-responsive {
         padding: 0.4rem 0.8rem;
         font-size: 0.9rem;
     }
+
     .menu-responsive {
         padding-left: 0.5rem;
     }
+
     .list_icon {
         width: 1.5rem;
         height: 1.5rem;
     }
-    .link, .link-selected {
+
+    .link,
+    .link-selected {
         font-size: 1.3rem;
     }
 }
@@ -761,24 +814,31 @@ video {
     .header-responsive {
         padding: 1rem 2rem;
     }
+
     .flicker {
         font-size: 3.5rem;
     }
+
     .frase-titulo {
         font-size: 1.25rem;
     }
+
     .button-responsive {
         padding: 0.75rem 1.5rem;
         font-size: 1.25rem;
     }
+
     .menu-responsive {
         display: block;
     }
+
     .list_icon {
         width: 2rem;
         height: 2rem;
     }
-    .link, .link-selected {
+
+    .link,
+    .link-selected {
         font-size: 1.5rem;
         padding: 0.5rem;
     }
@@ -799,37 +859,55 @@ video {
         align-items: center;
         transition: height 0.3s ease;
     }
-    .link, .link-selected {
+
+    .link,
+    .link-selected {
         font-size: 1rem;
         padding: 0.3rem;
     }
+
     .header-responsive {
         padding: 0.5rem 1rem;
     }
+
     .flicker {
         font-size: 1.5rem;
     }
+
     .frase-titulo {
         font-size: 0.8rem;
     }
+
     .button-responsive {
         padding: 0.3rem 0.6rem;
         font-size: 0.8rem;
     }
-    .menu_hamburguesa:checked + .ul_links {
+
+    .menu_hamburguesa:checked+.ul_links {
         height: calc(115vh - var(--altura_header));
     }
+
     .menu-responsive {
         display: block;
         padding: 0.3rem;
     }
+
     .list_icon {
         width: 1.2rem;
         height: 1.2rem;
     }
 
     .hero-section {
-    height: 200vh;
+        height:150vh;
+    }
+
+    .hero-section h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        text-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+        animation: flicker 3s infinite alternate;
+    }
+
 }
 
 @media (min-height: 401px) and (max-height: 475px) {
@@ -847,33 +925,49 @@ video {
         align-items: center;
         transition: height 0.3s ease;
     }
-    .link, .link-selected {
+
+    .link,
+    .link-selected {
         font-size: 1.3rem;
         padding: 0.4rem;
     }
+
     .header-responsive {
         padding: 0.75rem 1.5rem;
     }
+
     .flicker {
         font-size: 2rem;
     }
+
     .frase-titulo {
         font-size: 1rem;
     }
+
     .button-responsive {
         padding: 0.4rem 0.8rem;
         font-size: 1rem;
     }
-    .menu_hamburguesa:checked + .ul_links {
+
+    .menu_hamburguesa:checked+.ul_links {
         height: calc(125vh - var(--altura_header));
     }
+
     .menu-responsive {
         display: block;
         padding: 0.4rem;
     }
+
     .list_icon {
         width: 1.5rem;
         height: 1.5rem;
+    }
+
+    .hero-section h2 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+        animation: flicker 3s infinite alternate;
     }
 }
 
@@ -892,11 +986,14 @@ video {
         align-items: center;
         transition: height 0.3s ease;
     }
-    .link, .link-selected {
+
+    .link,
+    .link-selected {
         font-size: 1.5rem;
         padding: 0.5rem;
     }
-    .menu_hamburguesa:checked + .ul_links {
+
+    .menu_hamburguesa:checked+.ul_links {
         height: calc(100vh - var(--altura_header));
     }
 }
