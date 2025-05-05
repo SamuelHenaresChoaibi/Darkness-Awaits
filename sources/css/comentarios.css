@@ -135,6 +135,15 @@
                 url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWI1ZHVsdTFkamdoMzAxbHI3ZzAzbGc3ZHR5ejhncmNxMGxqd283eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o85xyBPM2nmoMvraw/giphy.gif') center/cover no-repeat fixed;
 }
 
+.comments-section {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    margin: 2rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    max-width: 1200px;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .shadow-altar {
@@ -144,6 +153,11 @@
 
     .altar-title {
         font-size: 1.8rem;
+    }
+    .comments-section {
+        padding: 1rem;
+        margin: 1rem 1rem;
+        max-width: 1024px;
     }
 }
 
@@ -177,6 +191,12 @@
     .form-input, .form-textarea {
         font-size: 0.8rem;
     }
+
+    .comments-section {
+        padding: 1rem;
+        margin: 1rem 1rem;
+        max-width: 768px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -198,6 +218,12 @@
 
     .comment-text {
         font-size: 0.8rem;
+    }
+
+    .comments-section {
+        padding: 1.5rem;
+        margin: 4rem 2rem;
+        max-width: 480px;
     }
 }
 

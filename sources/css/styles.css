@@ -640,25 +640,26 @@ video {
     url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWI1ZHVsdTFkamdoMzAxbHI3ZzAzbGc3ZHR5ejhncmNxMGxqd283eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o85xyBPM2nmoMvraw/giphy.gif') center/cover no-repeat fixed;
 }
 
-/* Responsive Adjustments */
+/* Responsive Ajustes */
 @media (min-width: 1024px) {
-    .menu_hamburguesa, .menu-responsive {
-        display: none !important;
-    }
-
     .ul_links {
-        position: static;
-        height: auto;
-        flex-direction: row;
-        gap: 1.5rem;
-        background-color: transparent;
-        overflow: visible;
-        justify-content: flex-end;
+        position: absolute; 
+        top: var(--altura_header); 
+        left: 0;
+        width: 100%; 
+        height: 0; 
+        flex-direction: column; 
+        gap: 2rem; 
+        background-color: var(--color-menu); 
+        overflow: hidden; 
+        justify-content: center; 
+        align-items: center; 
+        transition: height 0.3s ease; 
     }
 
     .link, .link-selected {
-        font-size: 1.2rem;
-        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
+        padding: 0.5rem; 
     }
 
     .header-responsive {
@@ -670,12 +671,25 @@ video {
     }
 
     .frase-titulo {
-        font-size: 1.25rem;
+        font-size: 1.25rem; 
     }
 
     .button-responsive {
-        padding: 0.75rem 1.5rem;
-        font-size: 1.25rem;
+        padding: 0.75rem 1.5rem; 
+        font-size: 1.25rem; 
+    }
+
+    .menu_hamburguesa:checked + .ul_links {
+        height: calc(100vh - var(--altura_header)); /* Full height when toggled */
+    }
+
+    .menu-responsive {
+        display: block; 
+    }
+
+    .list_icon {
+        width: 2rem; 
+        height: 2rem;
     }
 }
 
