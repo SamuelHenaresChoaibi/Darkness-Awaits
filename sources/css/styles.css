@@ -640,199 +640,263 @@ video {
     url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWI1ZHVsdTFkamdoMzAxbHI3ZzAzbGc3ZHR5ejhncmNxMGxqd283eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o85xyBPM2nmoMvraw/giphy.gif') center/cover no-repeat fixed;
 }
 
-/* Responsive Ajustes */
-@media (min-width: 1024px) {
-    .ul_links {
-        position: absolute; 
-        top: var(--altura_header); 
-        left: 0;
-        width: 100%; 
-        height: 0; 
-        flex-direction: column; 
-        gap: 2rem; 
-        background-color: var(--color-menu); 
-        overflow: hidden; 
-        justify-content: center; 
-        align-items: center; 
-        transition: height 0.3s ease; 
-    }
-
-    .link, .link-selected {
-        font-size: 1.5rem;
-        padding: 0.5rem; 
-    }
-
-    .header-responsive {
-        padding: 1rem 2rem;
-    }
-
-    .flicker {
-        font-size: 3.5rem;
-    }
-
-    .frase-titulo {
-        font-size: 1.25rem; 
-    }
-
-    .button-responsive {
-        padding: 0.75rem 1.5rem; 
-        font-size: 1.25rem; 
-    }
-
-    .menu_hamburguesa:checked + .ul_links {
-        height: calc(100vh - var(--altura_header)); /* Full height when toggled */
-    }
-
-    .menu-responsive {
-        display: block; 
-    }
-
-    .list_icon {
-        width: 2rem; 
-        height: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 360px) {
     :root {
-        --altura_header: 6rem;
-        --padding_left_right: 1rem;
+        --altura_header: 4.5rem;
+        --padding_left_right: 0.5rem;
     }
-
     .menu_hamburguesa:checked + .ul_links {
         height: calc(100vh - var(--altura_header));
     }
-
     .header-responsive {
-        padding: 0.5rem var(--padding_left_right);
-        flex-wrap: wrap;
+        padding: 0.3rem var(--padding_left_right);
     }
-
     .flicker {
-        font-size: 1.8rem;
-    }
-
-    .frase-titulo {
-        font-size: 0.9rem;
-    }
-
-    .button-responsive {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
-    }
-
-    .menu-responsive {
-        padding-left: 0.5rem;
-    }
-
-    .list_icon {
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-
-    .link, .link-selected {
         font-size: 1.3rem;
+    }
+    .frase-titulo {
+        font-size: 0.7rem;
+    }
+    .button-responsive {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.7rem;
+    }
+    .menu-responsive {
+        padding-left: 0.2rem;
+    }
+    .list_icon {
+        width: 1rem;
+        height: 1rem;
+    }
+    .link, .link-selected {
+        font-size: 1rem;
+        padding: 0.2rem;
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 500px) and (min-width: 361px) {
     :root {
         --altura_header: 5rem;
         --padding_left_right: 0.75rem;
     }
-
     .menu_hamburguesa:checked + .ul_links {
         height: calc(100vh - var(--altura_header));
     }
-
     .header-responsive {
         padding: 0.5rem var(--padding_left_right);
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
     }
-
     .header-responsive .text-center {
         width: 100%;
         padding: 0;
     }
-
     .flicker {
         font-size: 1.5rem;
         margin-top: 0.5rem;
     }
-
     .frase-titulo {
         font-size: 0.8rem;
         margin-bottom: 0.5rem;
     }
-
     .button-responsive {
         padding: 0rem 0rem;
         font-size: 0.8rem;
     }
-
     .menu-responsive {
         padding-left: 0.3rem;
     }
+    .list_icon {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .link, .link-selected {
+        font-size: 1.1rem;
+        padding: 0.3rem;
+    }
+    .features-section {
+        padding: 4rem 1rem;
+    }
+    .hero-title {
+        font-size: 3rem;
+    }
+}
 
+@media (max-width: 768px) and (min-width: 501px) {
+    :root {
+        --altura_header: 6rem;
+        --padding_left_right: 1rem;
+    }
+    .menu_hamburguesa:checked + .ul_links {
+        height: calc(100vh - var(--altura_header));
+    }
+    .header-responsive {
+        padding: 0.5rem var(--padding_left_right);
+        flex-wrap: wrap;
+    }
+    .flicker {
+        font-size: 1.8rem;
+    }
+    .frase-titulo {
+        font-size: 0.9rem;
+    }
+    .button-responsive {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    .menu-responsive {
+        padding-left: 0.5rem;
+    }
+    .list_icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .link, .link-selected {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .header-responsive {
+        padding: 1rem 2rem;
+    }
+    .flicker {
+        font-size: 3.5rem;
+    }
+    .frase-titulo {
+        font-size: 1.25rem;
+    }
+    .button-responsive {
+        padding: 0.75rem 1.5rem;
+        font-size: 1.25rem;
+    }
+    .menu-responsive {
+        display: block;
+    }
+    .list_icon {
+        width: 2rem;
+        height: 2rem;
+    }
+    .link, .link-selected {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-height: 400px) and (min-width: 200px) {
+    .ul_links {
+        position: absolute;
+        top: var(--altura_header);
+        left: 0;
+        width: 100%;
+        height: 0;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: var(--color-menu);
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        transition: height 0.3s ease;
+    }
+    .link, .link-selected {
+        font-size: 1rem;
+        padding: 0.3rem;
+    }
+    .header-responsive {
+        padding: 0.5rem 1rem;
+    }
+    .flicker {
+        font-size: 1.5rem;
+    }
+    .frase-titulo {
+        font-size: 0.8rem;
+    }
+    .button-responsive {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+    .menu_hamburguesa:checked + .ul_links {
+        height: calc(115vh - var(--altura_header));
+    }
+    .menu-responsive {
+        display: block;
+        padding: 0.3rem;
+    }
     .list_icon {
         width: 1.2rem;
         height: 1.2rem;
     }
 
-    .link, .link-selected {
-        font-size: 1.1rem;
-        padding: 0.3rem;
-    }
-    .features-section{
-        padding: 4rem 1rem;
-    }
-
-    .hero-title{
-        font-size: 3rem;
-    }
-
+    .hero-section {
+    height: 200vh;
 }
 
-@media (max-width: 360px) {
-    :root {
-        --altura_header: 4.5rem;
-        --padding_left_right: 0.5rem;
+@media (min-height: 401px) and (max-height: 475px) {
+    .ul_links {
+        position: absolute;
+        top: var(--altura_header);
+        left: 0;
+        width: 100%;
+        height: 0;
+        flex-direction: column;
+        gap: 1.5rem;
+        background-color: var(--color-menu);
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        transition: height 0.3s ease;
     }
+    .link, .link-selected {
+        font-size: 1.3rem;
+        padding: 0.4rem;
+    }
+    .header-responsive {
+        padding: 0.75rem 1.5rem;
+    }
+    .flicker {
+        font-size: 2rem;
+    }
+    .frase-titulo {
+        font-size: 1rem;
+    }
+    .button-responsive {
+        padding: 0.4rem 0.8rem;
+        font-size: 1rem;
+    }
+    .menu_hamburguesa:checked + .ul_links {
+        height: calc(125vh - var(--altura_header));
+    }
+    .menu-responsive {
+        display: block;
+        padding: 0.4rem;
+    }
+    .list_icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
 
+@media (min-height: 476px) {
+    .ul_links {
+        position: absolute;
+        top: var(--altura_header);
+        left: 0;
+        width: 100%;
+        height: 0;
+        flex-direction: column;
+        gap: 2rem;
+        background-color: var(--color-menu);
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        transition: height 0.3s ease;
+    }
+    .link, .link-selected {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
     .menu_hamburguesa:checked + .ul_links {
         height: calc(100vh - var(--altura_header));
-    }
-
-    .header-responsive {
-        padding: 0.3rem var(--padding_left_right);
-    }
-
-    .flicker {
-        font-size: 1.3rem;
-    }
-
-    .frase-titulo {
-        font-size: 0.7rem;
-    }
-
-    .button-responsive {
-        padding: 0.2rem 0.5rem;
-        font-size: 0.7rem;
-    }
-
-    .menu-responsive {
-        padding-left: 0.2rem;
-    }
-
-    .list_icon {
-        width: 1rem;
-        height: 1rem;
-    }
-
-    .link, .link-selected {
-        font-size: 1rem;
-        padding: 0.2rem;
     }
 }
