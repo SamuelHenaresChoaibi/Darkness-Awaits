@@ -40,7 +40,7 @@ function processApiPosts(apiData) {
     if (apiData.data && Array.isArray(apiData.data)) {
         posts = apiData.data.map(item => ({
             title: item.title || "Sin notícias",
-            content: item.content || "Aún no hay ninguna noticia",
+            content: item.content || "Aún no hay ninguna noticia"
         }));
     }
 
@@ -65,14 +65,21 @@ function renderPosts(posts) {
         postElement.className = 'post-card';
         postElement.innerHTML = `
             <h3>${escapeHtml(post.title)}</h3>
-            <p>${escapeHtml(post.content)}</p>
+            <div>${parseHtmlContent(post.content)}</div>
             <a href="#" class="read-more">Leer más</a>
         `;
         container.appendChild(postElement);
     });
 }
 
-// Escapar HTML para prevenir XSS
+// Parse HTML content safely
+function parseHtmlContent(html) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    return doc.body.innerHTML;
+}
+
+// Escapar HTML para prevenir XSS in titles
 function escapeHtml(unsafe) {
     return unsafe
         .replace(/&/g, "&amp;")
