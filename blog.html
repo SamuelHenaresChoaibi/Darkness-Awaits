@@ -22,7 +22,7 @@
 <body class="blog-page">
     <div id="linterna" class="linterna z-40"></div>
     <!-- Header -->
-    <header class="header-responsive bg-black py-6 px-8 flex justify-between items-center fade-in shadow-xl">
+    <header class="bg-black py-4 px-4 sm:px-6 md:px-8 flex justify-between items-center fade-in shadow-xl">
         <!-- Menú Hamburguesa -->
         <label for="menu_hamburguesa" class="menu-responsive">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="list_icon"
@@ -59,22 +59,21 @@
         </ul>
 
         <!-- Título y Subtítulo -->
-        <div class="text-center px-4">
-
-            <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold text-red-600 flicker">
+        <div class="flex-1 text-center px-2 sm:px-4">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-red-600 animate-[flicker_1.5s_infinite_alternate]">
                 DARKNESS AWAITS
             </h1>
-            <p class="text-lg sm:text-xl text-gray-400 italic mt-2 frase-titulo">
+            <p class="text-sm sm:text-base md:text-lg text-gray-400 italic mt-1 sm:mt-2">
                 La oscuridad te espera... ¿Estás listo?
             </p>
         </div>
 
         <!-- Botón de Mutear -->
         <button id="mute-button"
-            class="button-responsive px-6 py-2 bg-black text-white rounded-lg hover:bg-red-800 transition tx-20">
+            class="px-3 py-1 sm:px-4 sm:py-2 bg-black text-white rounded-lg hover:bg-red-800 transition text-base sm:text-lg">
             🔊
         </button>
-        <audio id="background-music" src="/sources/sounds/sound-ambience-sonido-ambiente-3-14040.mp3" autoplay
+        <audio id="background-music" src="sources/sounds/sound-ambience-sonido-ambiente-3-14040.mp3" autoplay
             loop></audio>
     </header>
 

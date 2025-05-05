@@ -4,14 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
     <meta name="author" content="Darkness-Team">
     <meta name="description" content="Darkness Awaits - Juego de Terror Psicológico">
     <meta property="og:url" content="Darkness-Awaits">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="juego de terror, horror, darkness awaits, videojuego indie">
     <link rel="icon" href="https://i.pinimg.com/736x/d0/ee/cd/d0eecd5b96b94707a317053ab1addd83.jpg">
-    <!-- Define el logo -->
     <title>Darkness Awaits</title>
     <link rel="stylesheet" href="sources/css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -21,7 +19,7 @@
 <body class="bg-dark text-white font-sans">
     <div id="linterna" class="linterna z-40"></div>
 
-    <header class="header-responsive bg-black py-6 px-8 flex justify-between items-center fade-in shadow-xl">
+    <header class="bg-black py-4 px-4 sm:px-6 md:px-8 flex justify-between items-center fade-in shadow-xl">
         <!-- Menú Hamburguesa -->
         <label for="menu_hamburguesa" class="menu-responsive">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="list_icon"
@@ -58,19 +56,18 @@
         </ul>
 
         <!-- Título y Subtítulo -->
-        <div class="text-center px-4">
-
-            <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold text-red-600 flicker">
+        <div class="flex-1 text-center px-2 sm:px-4">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-red-600 animate-[flicker_1.5s_infinite_alternate]">
                 DARKNESS AWAITS
             </h1>
-            <p class="text-lg sm:text-xl text-gray-400 italic mt-2 frase-titulo">
+            <p class="text-sm sm:text-base md:text-lg text-gray-400 italic mt-1 sm:mt-2">
                 La oscuridad te espera... ¿Estás listo?
             </p>
         </div>
 
         <!-- Botón de Mutear -->
         <button id="mute-button"
-            class="button-responsive px-6 py-2 bg-black text-white rounded-lg hover:bg-red-800 transition tx-20">
+            class="px-3 py-1 sm:px-4 sm:py-2 bg-black text-white rounded-lg hover:bg-red-800 transition text-base sm:text-lg">
             🔊
         </button>
         <audio id="background-music" src="sources/sounds/sound-ambience-sonido-ambiente-3-14040.mp3" autoplay
@@ -176,35 +173,27 @@
 
     <!-- Download Section -->
     <section id="download" class="download-section">
-        <!-- Fondo interactivo con partículas -->
         <div id="particles-js" class="particles-background"></div>
-
-        <!-- Contenido de la sección -->
         <div class="download-content">
             <h2>¿LISTO PARA EL HORROR?</h2>
             <p class="glitch-text">Descarga ahora y comienza tu viaje a la oscuridad</p>
-
             <div class="download-options">
                 <a href="como-descargar.html" class="download-btn windows pulse-animation">
                     <span class="btn-icon">💻</span>
                     <span>DESCARGAR PARA WINDOWS</span>
                 </a>
-
                 <a href="https://corbekun.itch.io/darkness-awaits" class="download-btn mac pulse-animation">
                     <span class="btn-icon">👾</span>
                     <span>PÁGINA PARA MAC, LINUX Y WINDOWS</span>
                 </a>
             </div>
-
             <div class="blood-drips"></div>
         </div>
     </section>
 
-
     <footer class="bg-black py-12 text-center fade-in shadow-xl text-gray-400">
         <div class="container mx-auto px-6">
-            <p class="text-lg">&copy; 2025 Darkness Awaits. Todos los derechos reservados.</p>
-
+            <p class="text-lg">© 2025 Darkness Awaits. Todos los derechos reservados.</p>
             <div class="flex justify-center space-x-6 mt-4">
                 <a href="#" class="hover:text-red-500 transition">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
@@ -224,7 +213,6 @@
                     </svg>
                 </a>
             </div>
-
             <div class="mt-6">
                 <ul class="flex justify-center space-x-6 text-sm">
                     <li><a href="#" class="hover:text-red-500 transition">Política de Privacidad</a></li>
@@ -233,7 +221,6 @@
                     <li><a href="#" class="hover:text-red-500 transition">Contacto</a></li>
                 </ul>
             </div>
-
             <div class="mt-6">
                 <p class="text-xs">Desarrollado por <a href="#" class="text-red-500 hover:underline">Darkness Team</a>
                 </p>
