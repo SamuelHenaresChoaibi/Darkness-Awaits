@@ -1,17 +1,10 @@
 const API_BASE_URL = 'https://phpstack-1076337-5399863.cloudwaysapps.com';
 const API_TOKEN = 'fyWGkq96GJroFQBn07JGDJL2Qp7aoYVaqduQKOF5HGO97AdbGagdOeoynKyF';
+const REFRESH_INTERVAL = 5 * 60 * 1000; // 5 minutes in milliseconds
 
-document.addEventListener('DOMContentLoaded', async () => {
-    try {
-        await loadRecords();
-        const form = document.getElementById('registroForm');
-        if (form) {
-            form.addEventListener('submit', handleRecordSubmit);
-        }
-    } catch (error) {
-        console.error('Error inicializando:', error);
-        showError('La oscuridad interrumpe la conexión...');
-    }
+document.addEventListener('DOMContentLoaded', () => {
+    loadRecords();
+    setInterval(loadRecords, REFRESH_INTERVAL);
 });
 
 // Función para cargar registros desde la API
@@ -67,72 +60,12 @@ function renderRecords(records) {
     records.forEach(record => {
         const tr = document.createElement('tr');
         tr.className = 'shadow-record';
-        const date = new Date().toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' });
         tr.innerHTML = `
             <td>${escapeHtml(record.name)}</td>
             <td>${escapeHtml(record.puntuacion.toString())}</td>
-            <td>${date}</td>
         `;
         tbody.appendChild(tr);
     });
-}
-
-// Manejar envío de nuevo registro
-async function handleRecordSubmit(event) {
-    event.preventDefault();
-
-    const form = event.target;
-    const formData = new FormData(form);
-    const name = formData.get('jugador') || "Jugador Anónimo";
-    const score = parseInt(formData.get('puntuacion')) || 0;
-
-    if (score <= 0) {
-        showError('La puntuación debe ser mayor a 0.');
-        return;
-    }
-
-    try {
-        const submitBtn = form.querySelector('button[type="submit"]');
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Inscribiendo en las sombras...';
-
-        const newRecord = {
-            api_token: API_TOKEN,
-            name: name,
-            puntuacion: score,
-        };
-        await postRecord(newRecord);
-        showSuccess('Registro inscrito con éxito en el altar.');
-
-        await loadRecords();
-        form.reset();
-    } catch (error) {
-        console.error('Error enviando registro:', error);
-        showError('El registro se perdió en el vacío...');
-    } finally {
-        const submitBtn = form.querySelector('button[type="submit"]');
-        if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Inscribir en el Altar';
-        }
-    }
-}
-
-// Función para enviar registro a la API
-async function postRecord(record) {
-    const response = await fetch(`${API_BASE_URL}/api/classification`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(record)
-    });
-
-    if (!response.ok) {
-        throw new Error(`Error HTTP: ${response.status}`);
-    }
-
-    return await response.json();
 }
 
 // Escapar HTML para prevenir XSS
@@ -148,9 +81,4 @@ function escapeHtml(unsafe) {
 // Mostrar mensaje de error
 function showError(message) {
     alert(`Error: ${message}`);
-}
-
-// Mostrar mensaje de éxito
-function showSuccess(message) {
-    alert(`Éxito: ${message}`);
 }
